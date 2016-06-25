@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/desk.css">
+	<link rel="stylesheet" type="text/css" href="css/qqPage.css">
+	<link rel="stylesheet" type="text/css" href="css/viewer.min.css">
+</head>
+<body>
+	<div id="leftRightImg">
+		<span id="pngLine"></span>
+		<div id="Png"></div>
+	</div>
+	<div id="goBack"></div>
+	<section id="content">
+		<section id="contAll">
+			<section id="wrap">
+				<div id="allDesk">
+					<div id="imac">
+						<div class="hide"></div>
+						<div class="hide"></div>
+					</div>
+					<div id="keybord"></div>
+					<div id="mouse"></div>
+					<div id="tree"></div>
+					<div class="cd cd1"></div>
+					<div class="cd cd2"></div>
+					<div class="cd cd3"></div>
+					<div id="note"></div>
+					<div id="nodebook1"></div>
+					<div id="bookIndex"></div>
+					<div id="nodebook2">
+						<div id="canvas">
+							<div id="book-zoom">
+								<div class="sample-docs">
+									<!-- <div ignore="1" class="tabs"><div class="left">  </div> <div class="right"> </div></div> -->
+									<div class="hard"></div>
+									<div class="hard"></div>
+									<div class="hard p29"></div>
+									<div class="hard p30"></div>
+								</div>
+							</div>
+							<div id="slider-bar" class="turnjs-slider">
+								<div id="slider"></div>
+							</div>
+						</div>
+					</div>
+					<div id="pen"></div>
+					<div id="photo"></div>
+					<div id="coffe"></div>
+					<div id="phone" class="phone"></div>
+				</div>
+			</section>
+			<section id="SecPhone">
+				<div class="phoneList">
+					<div id="bigPhone">
+						<div id="qqIndex"></div>
+							<section id="QQpage">
+							<div id="qqWrap">
+								<div id="gun"><span id="hua"></span></div>
+								<div id="box"></div>
+							</div>
+							<div class="content">
+								<span id="ico" class="smallIco"></span>
+								<select id="selBtn">
+									<option>enter</option>
+									<option>ctrl+enter</option>
+								</select>
+								<input type="button" id='btn' value ='SEND'/>
+								<input type='text' id="txt" placeholder='请输入。。。'/>
+							</div>
+						</section> 
+						<div id="huakuaiParent">
+							<div id="huakuai"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</section>
+		<section id="rightTmc">
+			<div id="rightTmc2">
+				<div id="rightslid">
+					<audio src="1.mp3"></audio>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</section>
+	</section>
+	<script type="text/javascript">
+	</script>
+	<script type="text/javascript" src='js/desk.js'></script>
+	<script type="text/javascript" src='js/startMove.js'></script>
+	<!-- <script type="text/javascript" src='js/fanye.js'></script>
+	  <script type="text/javascript" src='js/QQpage.js'></script> -->
+	 <script type="text/javascript" src="js/jquery.min.1.7.js"></script>
+ 	<!-- // <script type="text/javascript" src="js/jquery.min.js"></script> -->
+
+	<script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+
+	<script type="text/javascript" src="js/hash.js"></script>
+	<script type="text/javascript" src="js/hash.js"></script>
+	<script type="text/javascript" src="js/viewer.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			$('#leftRightImg').css({
+				opacity:0,
+				display:'none'
+			})
+		},6000)
+		$('#goBack').click(function(){
+			window.open('main.html')
+		})
+	})
+
+</script>
+
+</body>
+</html>

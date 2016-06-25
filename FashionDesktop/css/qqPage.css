@@ -1,0 +1,141 @@
+#box{
+	width: 338px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.content{
+	height:36px;
+	position: relative;
+}
+#txt{
+	height: 30px;
+	width:210px;
+	line-height: 30px;
+	padding:0 5px;
+	float: right;
+	outline: none;
+	border: 1px solid #ccc;
+   	margin-top: 2px;
+   	/*border-left: none;*/
+}
+#btn{
+	width:65px;
+	height:32px;
+	margin-top:2px;
+	margin-right:1px;
+	float: right;
+	border:none;
+	background: #DAE7F9;
+	border-left: 5px solid #fff;
+	outline: none;
+}
+#selBtn{
+	width:20px;
+	height:32px;
+	float: right;
+	border: none;
+   	outline: none;
+   	margin-top: 2px;
+}
+.txtClass{
+	width:200px;
+	border:2px solid #fff;
+	font-size: 16px;
+	color: #000;
+	font-family: '幼圆';
+	word-break:break-all; 
+	padding:2px 5px;
+	border-radius: 5px;
+	margin: 5px 5px;
+	float: left;
+	position: relative;
+}
+.txtLeft{
+	float: left;
+}
+.txtRight{
+	float: right;
+}
+#ico{
+	width:30px;
+	height:30px;
+	border:1px solid #ccc;
+	position: absolute;
+	left:2px;
+	margin-top: 2px;
+}
+.IcoR{
+	width:28px;
+	height:28px;
+	position: absolute;
+	left: -30px;
+	top:-2px;
+	background: url('../img/dilei.png') no-repeat center;
+}
+.IcoL{
+	width:28px;
+	height:28px;
+	position: absolute;
+	right: -30px;
+	top:-2px;
+	background: url('../img/guzhang.png') no-repeat center;
+}
+.smallIco{
+	background: url('../img/dilei.png') no-repeat center;
+}
+.guzhangIco{
+	background: url('../img/guzhang.png') no-repeat center;
+}
+#QQpage,#qqIndex{
+	width: 344px;
+   	height: 484px;
+   	background: url('../img/qqbg.png') no-repeat;
+	position: absolute;
+	top:166px;
+	left:45px;
+}
+#QQpage{
+	background: url('../img/qqbg.png') no-repeat;
+	z-index: 1;
+	display: none;
+	/*/transition:1s;*/
+}
+#qqIndex{
+   	background: url('../img/qqIndex.png') no-repeat;
+   	z-index: 2;
+   	display: none;
+   	transition:3s;
+}
+
+/*滚动条*/
+#gun{
+	width: 10px;
+    height: 388px;
+    background: #FAFBFD;
+    position: absolute;
+    right: 5px;
+    top: 	0px;
+    border: 1px solid #A4ABB1;
+    border-radius: 10px;
+  display: none;
+}
+#hua{
+	width: 10px;
+	height: 80px;
+	background: #F1F2F4;
+	position: absolute;
+	right:0px;
+	top:0;
+	border-radius: 5px;
+	outline: none;
+	border-top: 1px solid #A4ABB1;
+   	border-bottom: 1px solid #A4ABB1
+}
+#qqWrap{
+	width: 338px;
+   	height: 388px;
+	overflow: hidden;
+	margin-top: 54px;
+	position: relative;
+}

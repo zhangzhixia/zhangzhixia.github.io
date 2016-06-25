@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1" />
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<section id="bigBox">
+	<section id="wrap">
+		<a id="fullsc" href="javascript:;"></a>
+		<a id="logo" href="index.html" target="_self" title="点我带你参观办公桌哦！"></a>
+		<span id="logo_span"></span>
+		<div id="bigHead">
+			<div id="headChild">
+				<div id="ChildImg">
+				</div>
+			</div>
+		</div>
+		<div id="redio">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<audio src="1.mp3" zdy="1"></audio>
+		</div>
+		<div id="imgs">
+			<ul id="sence">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</section>
+	<section id="zzc"> 
+		<div id="dnImg">
+			<a href="javascript:;"></a>
+			<a href="javascript:;"></a>
+		</div>
+	</section>
+</section>
+
+	 <section id="wrapLoad">
+      <div id="BigClock">
+          <div id="load"></div>
+          <div id="clock">
+              <span id="hour"></span>
+          </div>
+          <div id="date">
+             <span id="month"></span>
+             <span id="day"></span>
+              <span id="year"></span>
+          </div>
+          <div id="Mrlogo"></div>
+      </div>
+  </section>
+<script type="text/javascript" src="js/jquery.min.1.7.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+
+
+	  getData();
+      setInterval(function(){
+        getData();
+      },1000)
+      // 获取日期
+     function getData(){
+        var d=new Date();
+        var dateArr=['Janurary','February','March','April','May','June','July','August','September','October','November','December'];
+        var vyear=d.getFullYear();
+        var vmonth=d.getMonth()+1;
+        var vday=d.getDate();
+        var h = d.getHours();
+        var m = d.getMinutes();
+        console.log(vyear,vmonth)
+        $('#year').html(vyear);
+        $('#month').html(dateArr[vmonth-1]);
+        $('#day').html(vday);
+        $('#hour').html(h+':'+m);
+     }
+
+	//加载进度
+		 var etControl = {};
+		 var count = 0;
+		 etControl.process=function(config){
+			this.updateProcess=function(percent){
+				setTimeout(function(){
+					$('#load').html(percent+'%');
+				},++count*500);
+				if(percent==100){
+					// 100%就从页面移除loading标签
+					setTimeout(function(){
+						$('#wrapLoad').animate({opacity:0},500);
+						setTimeout(function(){
+							$('#wrapLoad').css('display','none');
+						},800)
+					},count*500+800);
+				}
+			}
+		}
+	var p = new etControl.process();
+    var arr=[0,34,62,67,79,90,100];
+    var i=-1;
+	var setTime=setInterval(function(){
+		i++;
+		if(i>=arr.length){
+			i=100;
+			clearInterval(setTime);
+		}else{
+			p.updateProcess(arr[i]);
+		}
+   		
+   },50)
+	var iw=$(window).innerWidth();
+	var ih=$(window).innerHeight();
+	var divw=$('#dnImg').outerWidth();
+	var divh=$('#dnImg').outerHeight();
+	$('#dnImg').css({
+		top:(ih-divh)/2,
+		left:(iw-divw)/2
+	});
+})
+	$('#dnImg a').eq(0).on('click',function(){
+		$('#zzc').css({
+			display:'none',
+			zIndex:2
+		})
+		$('#fullsc').css('opacity',1);
+		//提示单击LOGO可跳转到我的桌面连接
+		setTimeout(function(){
+			$('#logo_span').animate({opacity:0},500)
+		},5000)
+	})
+	$('#dnImg a').eq(1).on('click',function(){
+		$('#zzc').css({
+			display:'none',
+			zIndex:2
+		})
+		$('#fullsc').css('opacity',1);
+		 toggleFullScreen();
+		 //提示单击LOGO可跳转到我的桌面连接
+		setTimeout(function(){
+			$('#logo_span').animate({opacity:0},500)
+		},5000)
+		})
+	$('#fullsc').on('click',function(){
+		 toggleFullScreen();
+	})
+	var timerCh1=null;
+	var timerCh2=null;
+	$('#redio').find('span').eq(0).on('click',function(){
+		console.log($('audio').attr('zdy'))
+
+		 if(parseInt($('audio').attr('zdy'))){
+		 	$('audio')[0].play();
+		 	$('audio').attr('zdy',0);
+		 	//切换大头娃娃
+		 	timerCh1=setInterval(function(){
+			$('#ChildImg')[0].style.backgroundImage="url('img/avatar_normal.png')";
+				timerCh2=setTimeout(function(){
+					$('#ChildImg')[0].style.backgroundImage="url('img/avatar_dance.png')";
+					$('#ChildImg')[0].style.backgroundSize="contain";
+				},500);
+			},1200);
+		 }else{
+		 	$('audio')[0].pause();
+		 	$('audio').attr('zdy',1);
+		 	clearInterval(timerCh1);
+		 	clearTimeout(timerCh2);
+		 	$('#ChildImg')[0].style.backgroundImage="url('img/avatar_normal.png')";
+		 }
+	})
+	var sence=$('#sence');
+	var senceLi=sence.find('li');
+	sence.on('mouseenter',function(ev){
+		var disX=ev.pageX-$(this).offset().left;
+		var disY=ev.pageY-$(this).offset().top;
+		$(document).on('mousemove',function(ev){
+			var l=ev.pageX-disX;
+			var t=ev.pageY-disY;
+			senceLi.each(function(i,elem){
+				$(elem).stop();
+				var marginL=l*$(elem).css('zIndex')/20;
+				var marginT=t*$(elem).css('zIndex')/20;
+				$(elem).css({
+					marginLeft:marginL,
+					marginTop:marginT
+				});
+			})
+		})
+		$(document).on('mouseup',function(ev){
+			$(this).off('mousemove');
+		});
+		
+		//ev.preventDefault();
+		return false;
+	})
+
+
+	//全屏切换
+		function toggleFullScreen() {
+			 if (!document.fullscreenElement &&    // alternative standard method
+			     !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
+			   if (document.documentElement.requestFullscreen) {
+			     document.documentElement.requestFullscreen();
+			   } else if (document.documentElement.msRequestFullscreen) {
+			     document.documentElement.msRequestFullscreen();
+			   } else if (document.documentElement.mozRequestFullScreen) {
+			     document.documentElement.mozRequestFullScreen();
+			   } else if (document.documentElement.webkitRequestFullscreen) {
+			     document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+			   }
+			 } else {
+			   if (document.exitFullscreen) {
+			     document.exitFullscreen();
+			   } else if (document.msExitFullscreen) {
+			     document.msExitFullscreen();
+			   } else if (document.mozCancelFullScreen) {
+			     document.mozCancelFullScreen();
+			   } else if (document.webkitExitFullscreen) {
+			     document.webkitExitFullscreen();
+			   }
+			 }
+		}
+
+</script>
+</body>
+</html>

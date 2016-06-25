@@ -1,0 +1,301 @@
+body,html{
+		background: #000;
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+	}
+	@keyframes pointMove{
+		0%{
+			margin-left: -100px;
+		}
+		100%{
+			margin-left: 90px;
+		}
+	}
+	#leftRightImg{
+		width:100%;
+		height: 100%;
+		background: #000;
+		position: relative;
+    	z-index: 99;
+    	opacity: 0.8;
+	}
+	#Png{
+		position: absolute;
+		left:50%;
+		top:50%;
+		margin-top: -78px;
+		margin-left: -100px;
+		width: 112px;
+		height: 156px;
+		background: url(../img/leftRightIco.png) no-repeat;
+		animation:pointMove 2.5s ease-out 2;
+	}
+	#pngLine{
+		position: absolute;
+		border:3px solid #fff;
+		left:50%;
+		top:50%;
+		margin-top: -74px;
+		margin-left: -56px;
+		width:200px;
+		border-radius: 50%;
+		/*display: none;*/
+	}
+	#goBack{
+		width:100px;
+		height: 60px;
+		position: absolute;
+		left: 0;
+		top:0;
+		background: url(../img/goBack.png) no-repeat;
+		z-index: 50;
+		left: 20px;
+        top: 20px;
+	}
+
+		#wrap{
+			width:1920px;
+			height: 1200px;
+			background: #000 url('../img/wooden_table.jpg') no-repeat;
+			position: absolute;
+			left:0;
+			top:0;
+		}
+		#allDesk{
+			width:100%;
+			height: 100%;
+			position: relative;
+		}
+		#imac{
+			width:880px;
+			height: 320px;
+			position: absolute;
+			top:34px;
+			left:290px;
+			background: url('../img/imac.png') no-repeat;
+		}
+		#imac div{
+			width:800px;
+			height: 198px;
+			background: url('../img/imac.png') no-repeat 0 -354px;
+			position: absolute;
+			left:39px;
+			top:48px;
+		}
+		#imac div:nth-of-type(1){
+			background-position: 0 -354px;
+		}
+		#imac div:nth-of-type(1){
+			background-position:  0 -552px;
+		}
+		.show{
+			display:block;
+		}
+		.hide{
+			display: none;
+		}
+		#keybord{
+			position: absolute;
+			width:458px;
+			height: 236px;
+			left:552px;
+			top:390px;
+			background: url('../img/item_icons_map.png') no-repeat -334px -740px;
+		}
+		#mouse{
+			width:114px;
+			height: 161px;
+			position: absolute;
+			top:394px;
+			left:1075px;
+			background: url('../img/item_icons_map.png') no-repeat -334px -984px;
+		}
+		#tree{
+			position: absolute;
+			width:324px;
+			height: 348px;
+			background: url('../img/item_icons_map.png') no-repeat 0 -662px;
+			top:298px;
+			left:19px;
+		}
+		.cd{
+			position: absolute;
+			width:220px;
+			height: 220px;
+			background: url('../img/item_icons_map.png') no-repeat;
+		}
+		.cd1{
+			left:20px;
+			top:706px;
+			background-position: 0 -433px;
+			z-index: 4;
+		}
+		.cd2{
+			left:116px;
+			top:736px;
+			background-position: -220px -433px;
+			z-index: 3;
+		}
+		.cd3{
+			left:60px;
+			top:768px;
+			background-position: 0 -433px;
+			z-index: 2;
+		}
+		#note{
+			width:290px;
+			height: 192px;
+			position: absolute;
+			background: url('../img/item_icons_map.png') no-repeat -450px -980px;
+			left:270px;
+			top:600px;
+		}
+		
+		#nodebook1{
+			width: 308px;
+		    height: 370px;
+		    position: absolute;
+		    left: 574px;
+		    top: 654px;
+		    background: url('../img/item_icons_map.png') no-repeat -621px 0;
+
+		}
+		#nodebook2{
+			width:578px;
+			height: 372px;
+			position: absolute;
+			left:670px;
+			top:660px;
+			/*background: url('../img/book3.png') no-repeat;*/
+			transition:all 5s linear;
+		}
+		#pen{
+			width:110px;
+			height: 247px;
+			position: absolute;
+			top:730px;
+			left:1346px;
+			background: url('../img/item_icons_map.png') no-repeat -790px -742px;
+		}
+		#photo{
+			position: absolute;
+			width:300px;
+			height: 308px;
+			background: url('../img/item_icons_map.png') no-repeat -694px -432px;
+			right: 318px;
+    		top: 200px;
+		}
+		#coffe{
+			width:236px;
+			height: 224px;
+			position: absolute;
+			right:270px;
+			top:550px;
+			background: url('../img/item_icons_map.png') no-repeat -440px -441px;
+		}
+		#phone{
+			width:110px;
+			height: 210px;
+			position: absolute;
+			left:366px;
+			bottom: 50px;
+			background: url('../img/iphone.png') no-repeat;
+		}
+		#SecPhone{
+			width:430px;
+			height: 802px;
+			position: absolute;
+			top:160px;
+			left:540px;
+			background: none;
+			display: none;
+			z-index: 10001;
+		/*	transition:0.5s;*/
+		}
+		.phoneList{
+			width:100%;
+			height: 100%;
+		}
+		#bigPhone{
+			width:430px;
+			height: 802px;
+			background: url('../img/iphone_large2.png') no-repeat;
+			position: relative;
+			display:none;
+		}
+		#huakuai{
+			width:72px;
+			height: 48px;
+			position: absolute;
+			left:70px;
+			bottom:180px;
+			background: url('../img/huakuai.png') no-repeat;
+			cursor: move;
+		}
+		#huakuaiParent{
+			width:430px;
+			height: 802px;
+			background: none;
+		}
+		/*//滑过桌面显示右侧透明层*/
+		#rightTmc{
+			position: absolute;
+			width:150px;
+			height: 100%;
+			right: 0;
+			top:0;
+		}
+		#rightTmc2{
+			width:0px;
+			height: 100%;
+			position: absolute;
+			background: rgba(0,0,0,0.5);
+			right: 0;
+			top:0px;
+			opacity: 0
+		}
+		#rightslid{
+			margin-top: 60px;
+		}
+
+		#rightTmc2 span{
+			display: block;
+			background: url(../img/player_icons.png) no-repeat;
+			margin: 0 auto 80px;
+		}
+		#rightTmc2 span:nth-of-type(1){
+			background-position: -70px -136px ;
+			width:52px;
+			height: 46px;
+		}
+		#rightTmc2 span:nth-of-type(2){
+			background-position: -80px -324px ;
+			width:36px;
+			height: 42px;
+		}
+		#rightTmc2 span:nth-of-type(3){
+			background-position: -80px -12px ;
+			width:36px;
+			height: 42px;
+		}
+		#rightTmc2 span:nth-of-type(4){
+			background-position: -70px -376px ;
+			width:52px;
+			height: 48px;
+		}
+		
+		#rightTmc2 span:nth-of-type(5){
+			background-position: -70px -264px ;
+			width:52px;
+			height: 48px;
+		}
+		.creatSpan{
+			position: absolute;
+			width:20px;
+			height: 20px;
+			background: #fff;
+			top: 3px;
+		    right: 15px;
+		    border-radius: 50%;
+		}
