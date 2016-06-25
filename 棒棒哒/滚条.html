@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		html,body{
+			height:100%;
+			width: 100%;
+			margin:0;
+			padding: 0;
+			overflow: hidden;
+		}
+		#wrap{
+			width:100%;
+			height: 100%
+		}
+		#gunTiao{
+			width: 30px;
+			height: 100%;
+			background: #ccc;
+			position: relative;
+			left:0;
+			top:0;
+		}
+		#gunLun{
+			width:30px;
+			height: 10%;
+			background: #000;
+			position: absolute;
+			left: 0;
+			top:0;
+		}
+		#cont{
+			position: relative;
+			top:-100%;
+			left:50px;
+			width:300px;
+			height: 100%;
+			background: #ccc;
+			text-align: left;
+			line-height: 30px;
+			font-size: 20px;
+			padding: 15px;
+		}
+		#text{
+			position: absolute;
+			top:0;
+			left:0;
+		}
+	</style>
+</head>
+<body>
+<div id="wrap">
+	<div id="gunTiao">
+		<div id="gunLun"></div>
+	</div>
+	<div id="cont">
+		<div id="text">
+			1.string arr.join([separator = ',']) 将数组中的所有元素连接成一个字符串
+			2.array arr.concat(value1, value2, ..., valueN) 将传入的数组或非数组值与原数组合并,组成一个新的数组并返回
+			3.array arr.reverse() 颠倒数组中元素的位置
+			4.array arr.splice(index,[length],value,value…) 数组截取,改变原数组.返回截取后的新数组 index-截取的位数,length-截取的长度,			value替换掉截取的内容
+			5.array arr.slice(index,[end]) 数组截取,不改变原数组.index-起始位置,end-结束位置
+			6.array arr.sort([compareFunction]) 数组排序,			compareFunction可选。用来指定按某种顺序进行排列的函数。如果省略，元素按照转换为的字符串的诸个字符的Unicode位点进行排序。
+			7.number arr.push(element1, ..., elementN) 添加一个或多个元素到数组的末尾,返回新数组length
+			8.number arr.unshift(element1, ..., elementN) 添加一个或多个元素到数组的头部,新数组的length
+			9.mixed arr.pop() 删除数组最后一个元素,返回被删除的那一个元素
+			10.number arr.shift() 删除数组第一个元素,返回被删除的那一个元素
+		</div>
+	</div>
+</div>
+	<script type="text/javascript">
+	var gunTiao=document.getElementById('gunTiao');
+	var gunLun=document.getElementById('gunLun');
+	var cont=document.getElementById('cont');
+	var text=document.getElementById('text');
+	var disY=0;
+	gunLun.addEventListener('mousedown',fnDown);
+	function fnDown(ev){
+		disY=ev.pageY-gunLun.offsetTop;
+		document.addEventListener('mousemove',fnMove);
+		document.addEventListener('mouseup',fnUp);
+		function fnMove(ev){
+			var pgT=ev.pageY-disY;
+			if(pgT<=0){
+				pgT=0;
+			}else if(pgT>=gunTiao.offsetHeight-gunLun.offsetHeight){
+				pgT=gunTiao.offsetHeight-gunLun.offsetHeight;
+			}
+			gunLun.style.top=pgT+'px';
+			var pers=pgT/(gunTiao.offsetHeight-gunLun.offsetHeight);
+			text.style.top=-pers*(text.scrollHeight-cont.offsetHeight)+'px';
+
+		}
+		function fnUp(){
+			document.removeEventListener('mousemove',fnMove);
+			document.removeEventListener('mouseup',fnUp);
+		}
+
+	}
+	var wrap=document.getElementById('wrap');
+	fnGun(wrap,function(down){
+		console.log(down)
+		var T=gunLun.offsetTop;
+		if(down){
+			T-=5;
+			if(T<=0){
+				T=0;
+			}
+		}else{
+			T+=5;
+			if(T>=gunTiao.offsetHeight-gunLun.offsetHeight){
+				T=gunTiao.offsetHeight-gunLun.offsetHeight;
+			}
+		}
+		gunLun.style.top=T+'px';
+		var gPers=gunLun.offsetTop/(gunTiao.offsetHeight-gunLun.offsetHeight);
+		text.style.top=gPers*(cont.offsetHeight-text.offsetHeight)+'px';
+	})
+	function fnGun(obj,gunMove){
+		if(window.navigator.userAgent.toLowerCase().indexOf('firefox')!=-1){
+			obj.addEventListener('DOMMouseScroll',fn);
+		}else{
+			obj.addEventListener('mousewheel',fn);
+		}
+		function fn(ev){
+			var down=true;
+			if(ev.wheelDelta){
+				down=ev.wheelDelta>0?true:false;
+			}else{
+				down=ev.detail>0?false:true;
+			}
+			// console.log(down)
+			typeof gunMove=='function' && gunMove(down);
+			ev.preventDefault();
+		}
+	}
+	</script>
+</body>
+</html>

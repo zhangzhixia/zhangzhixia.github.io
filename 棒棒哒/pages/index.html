@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	 <!-- // <script type="text/javascript" src="../js/common.js"></script> -->
+	<script type="text/javascript" src="../js/index.js"></script>
+	<script type="text/javascript" src="../js/startMove.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+
+</head>
+<body>
+	<div id="loadMain">
+		<div id="loading">
+			<span id="loadTxt"></span>
+		</div>
+		<span id="load"></span>
+	</div>
+	<div id="fwa">
+		<a href="javascript:;"></a>
+	</div>
+	<div id="container">
+		<div id="scrollBar">
+			<div class="track">
+				<div class="bj_track"></div>
+			</div>
+		</div>
+		<div id="invariant">
+			<div id="invariant_header"></div>
+			<div id="invariant_logo"></div>
+		</div>
+		<div id="autoPlay"></div>
+		<div id="separation"></div>
+		<div id="sound"></div>
+		 <div id="scrollContainer">
+			<div id="main">
+				 <!--第一屏竖向滚动结构    Start -->
+				 <div id="verticContainer">
+					<div id="verticScrollArea">
+						<div id="section_text">
+							<div id="section1_text"></div>
+							<div id="section1_scroll"></div>
+							<div id="section1_arrow"></div>
+							<div id="section1_better"></div>
+						</div> 
+						<!-- <div id="section0" class="section">
+							<div class="content"></div>
+						</div> -->
+						<div id="section1"	class="section">
+							<img id="section1_bg" class="sec_bg" src="../img/1/bg.jpg"/>
+							<img id="section1_desk" src="../img/1/desk.png"/>
+							<img id="section1_chair" src="../img/1/chair.png"/>
+						</div>
+						<div id="section2"	class="section">
+							<div class="content">
+								<img  id="section2_bg" class="sec_bg" src="../img/2/bg.jpg"/>
+								<img  id="section2_chair" src="../img/2/chair.png"/>
+								<img  id="section2_girl" src="../img/2/girl.png"/>
+							</div>
+						</div> 
+						<div id="shuffle1"	class="section">
+							<div id="shuffle1_content" class="shuffle1_content ">
+								<img id="shuffle1_zev" class="opacity zev sec_bg shuffle_show" src="../img/shuffle/zev.jpg"/>
+								<img id="shuffle1_sport" class="sport sec_bg shuffle_hide" src="../img/shuffle/sport.jpg"/>
+								<!--<div class="shuffle_button"></div>-->
+							</div>
+						</div>
+						<div id="section3"	class="section">
+							<div class="content">
+								<img  id="section3_bg" class="sec_bg" src="../img/3/bg.jpg"/>
+								<img  id="section3_girl" src="../img/3/girl.png"/>
+								<div id="section3-full"></div>
+							</div>
+						</div>
+						<div id="section4"	class="section">
+							<div class="content">
+								<img  id="section4_bg" class="sec_bg" src="../img/4/bg.jpg"/>
+								<img  id="section4_debris" src="../img/4/debris.png"/>
+								<img  id="section4_girl" src="../img/4/girl.png"/>
+							</div>
+						</div>
+						<div id="section5"	class="section">
+							<div class="content">
+								<img  id="section5_bg" class="sec_bg" src="../img/5/bg.jpg"/>
+								<img  id="section5_dog1" src="../img/5/dog1.png"/>
+								<img  id="section5_dog2" src="../img/5/dog2.png"/>
+							</div>
+						</div>
+						<div id="shuffle2"	class="section">
+							<div id="shuffle2_content" class="shuffle_content">
+								<img id="shuffle2_sport" class="opacity sport sec_bg shuffle_show" src="../img/shuffle/sport.jpg"/>
+								<img id="shuffle2_4wd" class="wd sec_bg shuffle_hide" src="../img/shuffle/4wd.jpg"/>
+								<div class="shuffle_button"></div>
+							</div>
+						</div>
+					</div>
+				</div> 
+				<!-- 第一屏竖向滚动结构    End -->
+				
+				<!-- 第一屏横向滚动结构    Start -->
+				 <div id="horizontalContainer">
+					<div id="horizontalScrollArea" class="cancelLeft">
+						<div id="section6_0">
+							<div class="content"></div>
+						</div>
+						 <div id="section6" class="section">
+							<div class="content">
+								<div id="section6_bg" ></div>
+								<div id="section6_dog"></div>
+								<div id="section6_girl"></div>
+							</div>
+						</div>
+						<div id="section7" class="section">
+							<div class="content">
+								<img id="section7_bg" class="sec_bg" src="../img/7/bg.jpg" />
+							</div>
+						</div>
+						<div id="shuffle3" class="section">
+							<div id="shuffle3_content" class="shuffle_content content">
+								<img id="shuffle3_4wd" class="opacity sec_bg shuffle_show" src="../img/shuffle/4wd.jpg" />
+								<img id="shuffle3_auto" class="sec_bg shuffle_hide" src="../img/shuffle/auto.jpg" />
+								<div class="shuffle_button"></div>
+							</div>
+						</div>
+						<div id="section8" class="section">
+							<div class="content">
+								<img id="section8_bg" class="sec_bg" src="../img/8/bg.jpg" />
+							</div>
+						</div>
+						<div id="section9" class="section">
+							<div class="content">
+								<img id="section9_bg" class="sec_bg" src="../img/9/bg.jpg" />
+								<img id="section9_girl" src="../img/9/girl.png" />
+							</div>
+						</div>
+						 <div id="section10" class="section">
+						 	<div id="section10_content" class="content">
+						 		<img id="img" src="../img/10/1.jpg"/>
+						 	</div>
+						 </div>
+						<div id="shuffle4" class="section">
+							<div id="shuffle4_content" class="shuffle_content content">
+								<img id="shuffle4_auto" class="opacity sec_bg shuffle_show" src="../img/shuffle/auto.jpg" />
+								<img id="shuffle4_4wd2" class="sec_bg shuffle_hide" src="../img/shuffle/4wd2.jpg" />
+								<div class="shuffle_button"></div>
+							</div>
+						</div>
+						<div id="section11" class="section">
+							<div class="content">
+								<img id="section11_bg" class="sec_bg" src="../img/11/bg.jpg"/>
+								<img id="section11_girl" src="../img/11/girl.png">
+							</div>
+						</div>
+						<div id="section11bis" class="section">
+							<div class="content">
+								<img id="section11bis_bg" class="sec_bg" src="../img/11bis/bg.jpg"/>
+								<img id="section11bis_girl" src="../img/11bis/girl.png">
+							</div>
+						</div>
+						<div id="shuffle5" class="section">
+							<div id="shuffle5_content" class="shuffle_content content">
+								<img id="shuffle5_4wd2" class="opacity sec_bg shuffle_show" src="../img/shuffle/4wd2.jpg" />
+								<img id="shuffle5_zev2" class="sec_bg shuffle_hide" src="../img/shuffle/zev2.jpg" />
+								<div class="shuffle_button"></div>
+							</div>
+						</div>
+						<div id="section12" class="section">
+							<div class="content">
+								<img id="section12_bg" class="sec_bg" src="../img/12/bg.jpg"/>
+								<img id="section12_girl" src="../img/12/girl.png">
+								<img id="section12_car" src="../img/12/car.png">
+								<div id="section12_roue1">
+									<img src="../img/12/roue1.png">
+								</div>
+								<div id="section12_roue2">
+									<img src="../img/12/roue2.png">
+								</div>
+							</div>
+						</div>
+						<div id="section13" class="section">
+							<div class="content">
+								<img id="section13_bg" class="sec_bg" src="../img/13/bg.jpg">
+							<img id="section13_girl" src="../img/13/girl.png">
+							<img id="section13_tree" src="../img/13/tree.png">
+							</div>
+						</div>
+						<div id="shuffle6" class="section">
+							<div id="shuffle6_content" class="shuffle_content content">
+								<img id="shuffle6_zev2" src="../img/shuffle/zev2.jpg" class="opacity sec_bg shuffle_show" />
+								<img src="../img/shuffle/auto.jpg" class="sec_bg shuffle_hide" />
+								<div class="shuffle_button"></div>
+							</div>
+						</div>
+					</div>
+				</div> 
+				<!-- 第一屏横向滚动结构    End -->
+				<!-- 第二屏竖向滚动结构    Strt -->
+				<div id="verticScrollArea2">
+					<!-- <div id="section14_0"></div> -->
+					<div id="section14" class="section">
+						<div class="content">
+							<img id="section14_bg" class="sec_bg" src="../img/14/bg.jpg"/>
+							<img id="section14_girl" src="../img/14/girl.png"/>
+						</div>
+					</div>
+					 <div id="section15" class="section">
+						<div class="content">
+							<img id="section15_bg" class="" src="../img/15/bg.jpg"/>
+						</div>
+					</div>
+					<div id="shuffle7" class="section">
+						<div id="shuffle7_content" class="shuffle_content">
+							<img id="shuffle7_auto2" class="opacity sec_bg shuffle_show" src="../img/shuffle/auto2.jpg" />
+							<img id="shuffle7_zev3" class="sec_bg shuffle_hide" src="../img/shuffle/zev3.jpg" />
+							<div class="shuffle_button"></div>
+						</div>
+					</div> 
+				</div>
+				<!-- 第二屏竖向滚动结构    End-->
+				<!-- 第4屏开始-->
+				 <div id="horizontalScroll2">
+					<div id="horizontalScrollArea2">
+						<div id="section16" class="section">
+							<div class="content">
+								<img id="section16_bg" class="sec_bg" src="../img/16/bg.jpg"/>
+								<img id="section16_meuble" src="../img/16/meuble.png"/>
+							</div>
+						</div>
+						<div id="section17" class="section">
+							<div class="content">
+								<img id="section17_bg" class="sec_bg" src="../img/17/bg.jpg"/>
+							</div>
+						</div>
+						<div id="section18" class="section">
+							<div class="content">
+								<img id="section18_bg" class="sec_bg" src="../img/18/bg.jpg"/>
+								<img id="section18_bg2" class="sec_bg" src="../img/18/bg2.jpg"/>
+								<img id="section18_girl" src="../img/18/girl.png"/>
+							</div>
+						</div>
+						<div id="shuffle8" class="section">
+							<div id="shuffle8_content" class="shuffle_content">
+								<img id="shuffle8_zev3" class="opacity sec_bg" src="../img/shuffle/zev3.jpg" />
+								<img id="shuffle8_sport2" class="sec_bg" src="../img/shuffle/sport2.jpg" />
+								<div class="shuffle_button"></div>
+							</div>
+						</div>
+						<div id="section19" class="section">
+							<div class="content">
+								<img id="section19_bg" class="sec_bg" src="../img/19/bg.jpg"/>
+								<img id="section19_window" src="../img/19/window.png"/>
+							</div>
+						</div>
+						<div id="final" class="section">
+							<div class="content">
+								<img id="final_bg" class="sec_bg" src="../img/final/bg.jpg"/>
+								<div id="final_handler">
+									<div id="top"></div>
+		             				<div id="share"></div>
+		             				<div id="findmore" ></div>
+		             				<div id="technology"></div>
+		             				<div id="final-link" ></div>
+		             				<div id="twitter"></div>
+		             				<div id="facebook"></div>
+		             				<div id="credits-popup">
+		             					<a href="javascript:;" target="_blank" id="sylvain"></a>
+		             				</div>
+		             				<div id="credits"></div>
+								</div>
+							</div> 
+						</div> 
+					</div>
+				</div> 
+			</div>
+		</div>
+	</div>
+
+	<div id="audioDiv"></div>
+	<script type="text/javascript">
+		var vertic1=document.getElementById('verticScrollArea');
+		var Vdivs=vertic1.children;
+		var iW=window.innerWidth;
+		var iH=window.innerHeight;
+		$(Vdivs).each(function(i,elem){
+			$(elem).css({
+				width:iW,
+				height:iH
+			})
+		})
+
+		//加载进度
+		 var etControl = {};
+		 var count = 0;
+		etControl.process=function(config){
+			this.updateProcess=function(percent){
+				setTimeout(function(){
+					$('#loadTxt').animate({
+						width:percent+'px'
+					})
+				},++count*500);
+				if(percent==200){
+					// 100%就从页面移除loading标签
+					setTimeout(function(){
+						$('#loadMain').animate({opacity:0},500);
+						setTimeout(function(){
+							$('#loadMain').css('display','none');
+						},800)
+					},count*500+800);
+				}
+			}
+		}
+	</script>
+</body>
+<script type="text/javascript">
+ /*需要放在body标签后面，然后在适当的位置调用updateProcess方法*/
+   var p = new etControl.process();
+   var arr=[0,34,62,90,135,170,178,190,200]
+   var i=0;
+   var audioDiv=document.getElementById('audioDiv');
+   var audio = document.createElement('audio');
+   audio.src = '../music/tupinLoading.ogg';//这里放音乐的地址
+   audio.autoplay=true;
+   audio.loop='loop';
+   audioDiv.appendChild(audio);
+   setInterval(function(){
+   		p.updateProcess(arr[i]);
+   		i++;
+   },50)
+</script>
+</html>

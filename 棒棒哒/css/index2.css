@@ -1,0 +1,723 @@
+*{
+	margin:0;
+	padding: 0;
+}
+html,body{
+	width:100%;
+	height: 100%;
+	background: #000;
+	/*overflow: hidden;*/
+	color:#fff;
+}
+#container{
+	width:100%;
+	height: 100%
+}
+#fwa{
+	position: fixed;
+	left:0;
+	bottom: 0;
+	z-index: 1500;
+}
+#fwa a{
+	width:100px;
+	height: 100px;
+	display: block;
+	background: url(../img/DayBotLeft.png) no-repeat;
+}
+#scrollBar{
+	position: fixed;
+	right:0;
+	top:0;
+	height: 100%;
+	width:7px;
+	background: #000;
+	z-index: 1500;
+}
+.track{
+	width:100%;
+	height: 100%;
+	position: fixed;
+	background: red;
+}
+.bj_track{
+	background: blue;
+	width:100%;
+	height: 40px;
+	position: absolute;
+	right: 0;
+	top:0;
+}
+#invariant{
+	width:100%;
+	height: 95px;
+	background:url(../img/menu.jpg) repeat-x;
+	position: absolute;
+	left: 0;
+	top:0;
+	z-index: 1500;
+	display: none;
+}
+#invariant_header{
+	width:100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:50%;
+	margin-left: -620px;
+	background: url(../img/menu.png) no-repeat;
+}
+#invariant_logo{
+	width:233px;
+	height: 19px;
+	position: absolute;
+	top:22px;
+	left:50%;
+	margin-left: -116px;
+	background: url(../img/hybrid.jpg) no-repeat;
+}
+#autoPlay{
+	position: fixed;
+	width:106px;
+	height: 20px;
+	z-index: 1500;
+	background: url(../img/autoplay.png) no-repeat 0 -20px;
+	top:23px;
+	right:140px;
+}
+#separation{
+	position: fixed;
+	top:23px;
+	right:128px;
+	margin-left: 513px;
+	width: 8px;
+	height: 20px;
+	background: url(../img/separation.png) no-repeat;
+	z-index: 1500;
+}
+#sound{
+	position: fixed;
+	right: 38px;
+	top:23px;
+	width:84px;
+	height: 20px;
+	background: url(../img/sound.png) no-repeat 0 -20px;
+	z-index: 1500;
+}
+/*第一大块（竖屏滚动）内容样式  Start*/
+#scrollContainer,
+#verticContainer,
+#verticScrollArea,
+#horizontalContainer,
+#verticScrollArea2,
+#horizontalScrollArea2{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+}
+
+#scrollContainer{
+	z-index: 1;
+}
+#main{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	/*overflow: hidden;*/
+}
+#section_text{
+	z-index: 99;
+}
+#section1_text,
+#section1_scroll,
+#section1_arrow,
+#section1_better{
+	position: absolute;
+	top:50%;
+	left:50%;
+	z-index: 999;
+}
+/*文字区样式   Start*/
+#section1_text{
+	width: 711px;
+	height: 137px;
+	margin-left: -356px;
+	margin-top: -70px;
+	background: url(../img/1/text.png);
+}
+#section1_scroll{
+	width:113px;
+	height: 24px;
+	margin-left: -56px;
+	margin-top: 180px;
+	background: url(../img/1/scroll.png);
+}
+#section1_arrow{
+	width:18px;
+	height: 12px;
+	margin-top: 220px;
+	margin-left: -9px;
+	background: url(../img/1/arrow.png);
+}
+#section1_better{
+	width: 307px;
+	height: 12px;
+	top:100%;
+	margin-top: -22px;
+	margin-left: -153px;
+	background: url(../img/1/better.png);
+}
+/*文字区样式   End*/
+/*common  start*/
+	.section{
+		position: relative;
+		text-align: center;
+		margin: 0 auto;
+	}
+	#section1,
+	#section2,
+	#section3,
+	#section4,
+	#section5,
+	#section_text{
+		width:100%;
+		height: 667px;
+		position: relative;
+		overflow: hidden;
+	}
+	#section1{
+		margin-top: -330px;
+	}
+/*common  End*/
+/*第1张大图  Start*/
+	#section0{
+		height: 100%;
+		background: #000;
+		position: relative;
+		overflow: hidden;
+	}
+	.content{
+		position: relative;
+		min-width: 768px;
+		height: 100%;
+		display: block;
+		text-align: center;
+		margin:0 auto;
+	}
+	
+	#section1_bg{
+		width: 100%;
+   		height: 738px;
+   		top: -35px;
+   		left: 0px;
+	}
+	#section1_desk{
+		position: absolute;
+		width:1001px;
+		height: 616px;
+		top:0;
+		right: 0;
+		margin-left: -500px;
+		z-index: 100;
+		transform: translateY(320px);
+	}
+	#section1_chair{
+		position: absolute;
+		width: 465px;
+		height: 324px;
+		top:0;
+		left:0;
+		z-index: 50;
+		margin-top: 0%;
+		transform:translateY(410px);
+	}
+	
+
+
+
+/*第1张大图  End*/
+/*第2张大图  Start*/
+#section2 .content{
+	width:100%;
+	position: relative;
+	overflow: hidden;
+}
+#section2_bg{
+	position: absolute;
+	width: 1366px;
+   	height: 738px;
+   	top: -35px;
+   	left: 0px;
+}
+#section2_chair{
+	width:338px;
+	height: 369px;
+	position: absolute;
+	bottom: -100px;
+	left:0;
+	z-index: 49;
+	transform:translate3d(368px,0px,0px);
+}
+#section2_girl{
+	width:613px;
+	height: 740px;
+	position: absolute;
+	bottom: -73px;
+	left:50%;
+	z-index: 50;
+	transform:translate3d(36px,0px,0px);
+}
+
+
+
+/*第2张大图  End*/
+/*第3张大图  Start*/
+	#shuffle1{
+		position: relative;
+		overflow: hidden;
+		/*height: 100%;*/
+		height: 667px;
+	}
+	.shuffle1_content{
+		position: absolute;
+		top:0;
+		left: 0;
+		height: 100%;
+		width:100%;
+	}
+	#shuffle1_zev{
+		width:100%;
+		height: 768px;
+		top:-50px;
+		left:0;
+		position: absolute;
+		opacity: 1;
+		z-index: 46;
+	}
+	.sport{
+		position: absolute;
+		left:0;
+		top:0;
+		width:100%;
+		height: 100%;
+	}
+	#shuffle1_sport{
+		height: 768px;
+		top:-50px;
+		opacity: 1;
+		z-index: 48;
+		display: none;
+	}
+	.shuffle_button{
+		position: absolute;
+		top:50%;
+		left:50%;
+		margin-top:-208px;
+		margin-left:-212px;
+		width:410px;
+		height: 410px;
+		background: url(../img/shuffle/button.png);
+		-webkit-transform: rotate(-208deg);
+		
+	}
+
+
+
+/*第3张大图  End*/
+/*第4张大图  Start*/
+	#section3_bg{
+		width:1366px;
+		height: 738px;
+		top:-35px;
+		left:0;
+		position: absolute;
+	}
+	#section3_girl{
+		width:468px;
+		height: 712px;
+		position: absolute;
+		bottom: 0;
+		left:50%;
+		z-index: 49;;
+		transform: translate3d(-62px,0,0);
+	}
+	#section3-full{
+		position: absolute;
+		bottom:50%;
+		left:50%;
+		width:1680px;
+		height: 1280px;
+		margin-bottom: -615px;
+		margin-left: -350px;
+		z-index: 50;;
+		background: url(../img/3/verre.png);
+		transform: translate3d(-200px,0px,0px);
+	}
+
+
+
+/*第4张大图  End*/
+/*第5张大图  Start*/
+	
+#section4_bg{
+	width: 1366px;
+	height: 738px;
+	top:-35px;
+	left:0;
+	position: absolute;
+}
+#section4_debris{
+	width:666px;
+	height: 1085px;
+	position: absolute;
+	top:0px;
+	left:50%;
+	margin-bottom: -540px;
+	z-index: 49;;
+	transform: translate3d(-180px,0px,0px);
+}
+#section4_girl{
+	width:396px;
+	height: 452px;
+	position: absolute;
+	bottom: -25px;
+	left:50%;
+	z-index: 49;;
+	transform: translate3d(20px,0px,0px);
+}
+
+
+/*第5张大图  End*/
+/*第6张大图  Start*/
+	
+#section5_bg{
+	width: 1366px;
+	height: 811px;
+	top:-0px;
+	left:0;
+	position: absolute;
+	z-index: 50;
+}
+#section5_dog1{
+	position: absolute;
+	bottom: 0;
+	left:-200px;
+	width:635px;
+	height: 720px;
+	transform: translate3d(-102px,0,0);
+	z-index: 51;
+}
+#section5_dog2{
+	position: absolute;
+	top:0;
+	left:100%;
+	width:430px;
+	height: 523px;
+	transform: translate3d(-332px,0,0);
+	z-index: 51;
+	margin-left: -80px;
+}
+
+
+/*第6张大图  End*/
+/*第7张大图  Start*/
+	
+#shuffle2{
+	height: 768px;
+	overflow: hidden;
+	position: relative;
+}
+#shuffle2_sport{
+	width:1366px;
+	height: 768px;
+	top:-50px;
+	left:0;
+	display: block;
+	z-index: 50;;
+}
+.wd{
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width:100%;
+}
+#shuffle2_4wd{
+	width:1366px;
+	height: 768px;
+	top:-50px;
+	left:0;
+	z-index: 48;;
+}
+
+/*第7张大图  End*/
+/*第一大块（竖屏滚动）内容样式  End*/
+/*第一大块（横屏滚动）内容样式  start*/
+#horizontalContainer{
+	position: absolute;
+	    top: 5010px;
+    left: -16px;
+	width:100%;
+	height: 100%
+}
+#horizontalScrollArea{
+	position: absolute;
+	width: 1000%;
+	height: 667px;
+	z-index: 51;
+	bottom: 0;
+	/*left: 100%;*/
+	transform: translate3d(1366px, 0px, 0px);
+}
+#section6{
+	width:1366px;
+	height: 678px;
+	z-index: 51;
+	position: absolute;
+	left:0;
+	bottom: 0;
+}
+.content{
+	position: relative;
+    min-width: 768px;
+    height: 100%;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#section6_bg{
+	position: absolute;
+	width:100%;
+	height: 100%;
+	background: url(../img/6/bg.jpg) no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+#section6_dog{
+	position: absolute;
+	top:0;
+	left:0px;
+	width:418px;
+	height: 316px;
+	background: url(../img/6/dog.png)
+}
+#section6_girl{
+	position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width:966px;
+    height: 699px;
+    margin-left: 400px;
+    background-image: url(../img/6/girl.png);
+}
+
+/*#shuffle3_content{
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+}*/
+#shuffle3_4wd,
+#shuffle4_auto,
+#shuffle5_4wd2,
+#shuffle7_auto2,
+#shuffle8_zev3{
+	position: absolute;
+    left: 0;
+    z-index: 50;
+}
+#shuffle3_auto,
+#shuffle4_4wd2,
+#shuffle5_zev2,
+#shuffle7_zev3,
+#shuffle8_sport2{
+	position: relative;
+    left: 0;
+    z-index: 64;
+}
+.shuffle_button{
+	display: none;}
+#section9_girl{
+	position: absolute;
+    bottom: 0px;
+    left: -500px;
+    height: 720px;
+    width: 3000px;
+}
+#section11_girl{
+	height: 612px;
+    width: 514px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate3d(-192px, 0px, 0px);
+}
+#section11bis_girl{
+	height: 562px;
+    width: 540px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -342px;
+    display: block;
+    transform: rotate(9.28036deg) translate3d(-290px, 0px, 0px);
+}
+#section12_girl{
+	height: 684px;
+    width: 613px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 60;
+    margin-left: -313px;
+    display: block;
+    transform: translate3d(1264px, 0px, 0px);
+}
+#section12_car{
+	height: 266px;
+    width: 798px;
+    position: absolute;
+    bottom: 15%;
+    left: 0px;
+    z-index: 50;
+    display: block;
+    transform: translate3d(452px, 0px, 0px);
+}
+#section12_roue1{
+	position: absolute;
+    bottom: 15%;
+    left: 0px;
+    height: 68px;
+    width: 68px;
+    z-index: 51;
+    margin-bottom: 51px;
+    display: block;
+    transform: translate3d(856px, 0px, 0px);
+}
+#section12_roue2{
+	position: absolute;
+    bottom: 15%;
+    left: 0px;
+    height: 72px;
+    width: 74px;
+    z-index: 51;
+    margin-bottom: 30px;
+    display: block;
+    transform: translate3d(589px, 0px, 0px);
+}
+
+
+#section13{
+	position: absolute;
+	z-index: 60;
+}
+#section13_girl{
+	height: 344px;
+    width: 149px;
+    position: absolute;
+    bottom: 0px;
+    right: 50%;
+    margin-right: 55px;
+    display: block;
+    transform: translate3d(0px, 0px, 0px);
+}
+#section13_tree{
+	height: 537px;
+    width: 327px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+#shuffle6{
+	z-index: 60;
+}
+
+/*第一大块（横屏滚动）内容样式  End*/
+
+#verticScrollArea2{
+	/*width:1366px;*/
+	position: absolute;
+	top:3700px;
+	left:17758px;
+	display: block;
+	/*overflow: hidden;*/
+}
+#section14{
+	width:100%;
+	height: 100%;
+	z-index: 57;
+}
+#section14_bg{
+	width:100%;
+	height: 100%;
+	position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#section14_girl{
+	height: 799px;
+    width: 411px;
+    position: absolute;
+    bottom: -225px;
+    right: 50%;
+    margin-right: -205px;
+}
+#section15{
+	position: absolute;
+}
+#section15_bg{
+	width:100%;
+}
+#horizontalScroll2{
+	position: absolute;
+	top:2350px;
+	left:19124px;
+	display: block;
+}
+#section16_meuble {
+    height: 388px;
+    width: 398px;
+    position: absolute;
+    bottom: 0px;
+    left: -276px;
+}
+#section19{
+	left:4098px !important;
+	top:667px !important;
+	position: absolute;
+}
+#final{
+	left:4098px !important;
+	top:1334px !important;
+	height: 740px !important;
+	position: absolute;
+}
+#final_bg{
+	width: 100%;
+    height: 768px;
+    top: -50px;
+    left: 0px;
+    display: block;
+}
+#section19_bg{
+	width:100%;
+}
+#section18_bg{
+	width:100%;
+	height: 100%;
+	position: absolute;
+	z-index: 50;
+}
+#section18_bg2{
+	width:100%;
+	height: 100%;
+	position:absolute;
+	z-index: 52;
+}
+#section17_bg{
+	width:100%;
+	height: 100%
+}

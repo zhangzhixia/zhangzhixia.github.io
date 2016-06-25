@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+</head>
+<style>
+	#box{
+		/*border:2px solid #000;*/
+		/*display: inline-block;*/
+	}
+	#box div{
+		float: left;
+		background:#ccc;
+		border:1px solid #ddd;
+		width:1366px;
+		height: 100px
+	}
+</style>
+<body>
+	<div id="box">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+	</div>
+
+	<script type="text/javascript">
+	$(function(){
+		$('#box').css({
+			width:1366*6
+		})
+	})
+	</script>
+</body>
+</html>
