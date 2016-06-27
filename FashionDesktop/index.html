@@ -160,13 +160,28 @@
 			oImg.onload=function(){
 				num++;
 				var scale = Math.floor((num/Imgs.length)*100);
-				$('#Png').animate({marginLeft:90},500);
-				setTimeout(function(){
-					$('#leftRightImg').css({
-						opacity:0,
-						display:'none'
-					})
-				},300)
+				$('#Png').animate({marginLeft:scale},function(){
+					$('#Png').animate({marginLeft:-100});
+				})
+				if(num == Imgs.length){
+					setTimeout(function(){
+						$('#leftRightImg').css({
+							opacity:0,
+							display:'none'
+						})
+					},300)
+				}
+			}
+			oImg.onerror=function(){
+				num++;
+				if(num == Imgs.length){
+					setTimeout(function(){
+						$('#leftRightImg').css({
+							opacity:0,
+							display:'none'
+						})
+					},300)
+				}
 			}
 		}
 		$('#goBack').click(function(){
