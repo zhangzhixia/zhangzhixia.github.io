@@ -347,10 +347,10 @@
 				})
 				$('#loadScale').html(scale+'%');
 				if(num==totArrImg.length){
-					// $('#loadMain').animate({opacity:0},500);
-					// setTimeout(function(){
-					// 	$('#loadMain').css('display','none');
-					// },800);
+					$('#loadMain').animate({opacity:0},500);
+					setTimeout(function(){
+						$('#loadMain').css('display','none');
+					},800);
 				}
 			}
 			oImgs.onError=function(){
