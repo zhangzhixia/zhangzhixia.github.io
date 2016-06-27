@@ -39,7 +39,17 @@ html,body{
 	height: 12px;
 	background: url(../img/load.png) no-repeat center;
 	left:50%;
-	margin-left: -36px;
+	margin-left: -70px;
+}
+#loadScale{
+	position: absolute;
+    bottom: 55px;
+    width: 72px;
+    height: 12px;
+    left: 50%;
+    margin-left: 20px;
+    color: #fff;
+    font-size: 18px;
 }
 #loadTxt{
 	position: absolute;

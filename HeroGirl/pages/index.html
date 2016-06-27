@@ -16,6 +16,7 @@
 			<span id="loadTxt"></span>
 		</div>
 		<span id="load"></span>
+		<span id="loadScale"></span>
 	</div>
 	<div id="fwa">
 		<a href="javascript:;"></a>
@@ -339,15 +340,17 @@
 			oImgs.src=totArrImg[i];
 			oImgs.onload=function(){
 				num++;
-				var scale = Math.floor((num/Imgs.length)*100);
+				var scale = Math.floor((num/totArrImg.length)*100);
+				var W=scale*2;
 				$('#loadTxt').animate({
-					width:scale+'px'
+					width:W+'px'
 				})
+				$('#loadScale').html(scale+'%');
 				if(num==totArrImg.length){
-					$('#loadMain').animate({opacity:0},500);
-					setTimeout(function(){
-						$('#loadMain').css('display','none');
-					},800);
+					// $('#loadMain').animate({opacity:0},500);
+					// setTimeout(function(){
+					// 	$('#loadMain').css('display','none');
+					// },800);
 				}
 			}
 			oImgs.onError=function(){
