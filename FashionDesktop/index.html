@@ -13,7 +13,10 @@
 </head>
 <body>
 	<div id="leftRightImg">
-	<span id="scale"></span>
+		<div class="box">
+			<div></div>
+		</div>
+		<span id="scale"></span>
 		<span id="pngLine"></span>
 		<div id="Png"></div>
 	</div>
@@ -164,10 +167,10 @@
 				$('#scale').html(scale+'%')
 				if(num == Imgs.length){
 					setTimeout(function(){
-						$('#leftRightImg').css({
-							opacity:0,
-							display:'none'
-						})
+						// $('#leftRightImg').css({
+						// 	opacity:0,
+						// 	display:'none'
+						// })
 					},300)
 				}
 			}
@@ -175,10 +178,10 @@
 				num++;
 				if(num == Imgs.length){
 					setTimeout(function(){
-						$('#leftRightImg').css({
-							opacity:0,
-							display:'none'
-						})
+						// $('#leftRightImg').css({
+						// 	opacity:0,
+						// 	display:'none'
+						// })
 					},300)
 				}
 			}
