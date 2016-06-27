@@ -263,7 +263,22 @@ $('#top').click(function(){
 	threeDefaultCss(verticScrollArea2,verticDivs2);
 	fourDefaultCss(horizon2s,horizontalScroll2);
 	$('#main').animate({top:0},50);
-	$('#section_text').animate({transform:'translateY(0px)'});
+	$('#section_text').css({transform:'translateY(0px)'});
+	$('#section1_desk').css({top:350,marginLeft:-500,transform: 'translateY(0px)'});
+	$('#section1_chair').css({top:500,transform:'translateY(0px)'});
+	$('#section1_text').css({
+		marginLeft: -400,
+    	marginTop: -100
+	})
+	$('#section1_scroll').animate({
+		opacity: 1
+	})
+	$('#section1_arrow').animate({
+		opacity: 1
+	})
+	$('#section1_better').animate({
+		opacity: 1
+	})
 })
 TotGun();
 function TotGun(){

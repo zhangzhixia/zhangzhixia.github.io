@@ -289,43 +289,78 @@
 			})
 		})
 
-		//加载进度
-		 var etControl = {};
-		 var count = 0;
-		etControl.process=function(config){
-			this.updateProcess=function(percent){
-				setTimeout(function(){
-					$('#loadTxt').animate({
-						width:percent+'px'
-					})
-				},++count*500);
-				if(percent==200){
-					// 100%就从页面移除loading标签
+		//背景图片
+		var Imgs=[
+			'../img/0/bg.jpg',
+			'../img/load.png',
+			'../img/DayBotLeft.png',
+			'../img/menu.jpg',
+			'../img/menu.png',
+			'../img/hybrid.jpg',
+			'../img/autoplay.png',
+			'../img/separation.png',
+			'../img/sound.png',
+			'../img/1/text.png',
+			'../img/1/scroll.png',
+			'../img/1/arrow.png',
+			'../img/1/better.png',
+			'../img/3/verre.png',
+			'../img/6/bg.jpg',
+			'../img/6/dog.png',
+			'../img/6/girl.png',
+			'../img/final/top.png',
+			'../img/final/share.png',
+			'../img/final/technology.png',
+			'../img/final/findmore.png',
+			'../img/final/twitter.png',
+			'../img/final/fb.png',
+			'../img/final/credits-popup.png',
+			'../img/final/credits.png'
+		];
+		//Img标签
+		var Imgs2=document.getElementsByTagName('img');
+		var Imgs2Arr=[];
+		for(var i=0;i<Imgs2.length;i++){
+			Imgs2Arr.push($(Imgs2[i]).attr('src'))
+		}
+		var Imgs3Arr=[];
+		//js生成的图片
+		for(var i=2;i<25;i++){
+			Imgs3Arr.push('../img/10/'+i+'.jpg');
+		}
+		// console.log(Imgs3Arr)
+
+		var totArrImg=Imgs.concat(Imgs2Arr);
+		totArrImg=totArrImg.concat(Imgs3Arr);
+		var num=0;
+		// console.log(totArrImg)
+		for(var i=0;i<totArrImg.length;i++){
+			var oImgs=new Image();
+			oImgs.src=totArrImg[i];
+			oImgs.onload=function(){
+				num++;
+				var scale = Math.floor((num/Imgs.length)*100);
+				$('#loadTxt').animate({
+					width:scale+'px'
+				})
+				if(num==totArrImg.length){
+					$('#loadMain').animate({opacity:0},500);
 					setTimeout(function(){
-						$('#loadMain').animate({opacity:0},500);
-						setTimeout(function(){
-							$('#loadMain').css('display','none');
-						},800)
-					},count*500+800);
+						$('#loadMain').css('display','none');
+					},800);
+				}
+			}
+			oImgs.onError=function(){
+				num++;
+				if(num==totArrImg.length){
+					$('#loadMain').animate({opacity:0},500);
+					setTimeout(function(){
+						$('#loadMain').css('display','none');
+					},800);
 				}
 			}
 		}
 	</script>
 </body>
-<script type="text/javascript">
- /*需要放在body标签后面，然后在适当的位置调用updateProcess方法*/
-   var p = new etControl.process();
-   var arr=[0,34,62,90,135,170,178,190,200]
-   var i=0;
-   var audioDiv=document.getElementById('audioDiv');
-   var audio = document.createElement('audio');
-   audio.src = '../music/tupinLoading.ogg';//这里放音乐的地址
-   audio.autoplay=true;
-   audio.loop='loop';
-   audioDiv.appendChild(audio);
-   setInterval(function(){
-   		p.updateProcess(arr[i]);
-   		i++;
-   },50)
-</script>
+
 </html>

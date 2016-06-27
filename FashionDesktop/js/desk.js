@@ -13,8 +13,22 @@
 			ev.preventDefault();
 		}
 		function mouseMove(ev){
-			wrap.style.top=ev.pageY-disY+'px';
-			wrap.style.left=ev.pageX-disX+'px';
+			var WdisY=ev.pageY-disY;
+			var WdisX=ev.pageX-disX;
+			console.log(disX ,disY)
+			if(WdisX <=- 650){
+				WdisX = -650;
+			}else if( WdisX > 100){
+				WdisX=100;
+			}
+			if(WdisY<=-650){
+				WdisY=-650;
+			}else if(WdisY>100){
+				WdisY=100;
+			}
+
+			wrap.style.top=WdisY+'px';
+			wrap.style.left=WdisX+'px';
 		}
 		function mouseUp(){
 			document.removeEventListener('mousemove',mouseMove);
@@ -59,6 +73,7 @@
 		var bigPhone=document.getElementById('bigPhone');
 		var huakuai=document.getElementById('huakuai');
 		var SecPhone=document.getElementById('SecPhone');
+		var SecPhoneBj=document.getElementById('SecPhoneBj');
 		var phoneList=SecPhone.querySelectorAll('.phoneList')[0];
 		var QQpage=document.getElementById('QQpage');
 		var qqIndex=document.getElementById('qqIndex');
@@ -69,6 +84,7 @@
 		phone.addEventListener('click',function(){
 			//打开大手机时的一些默认值
 			SecPhone.style.display='block';
+			SecPhoneBj.style.display='block';
 			bigPhone.style.display='block';
 			phone.style.display='none';
 			huakuai.style.left='70px';//滑块默认显示在左侧70像素的地方
@@ -92,6 +108,7 @@
 				mdisX=ev.pageX-huakuai.offsetLeft;
 				huakuaiParent.addEventListener('mousemove',HKmouseMove);
 				huakuaiParent.addEventListener('mouseup',HKmouseUp);
+				ev.preventDefault();
 				function HKmouseMove(ev){
 					hkL=ev.pageX-mdisX;
 					if(hkL<=70){
@@ -108,6 +125,7 @@
 							QQpage.style.display='block';
 						},500);
 						huakuai.style.display='none';
+						
 					}
 
 				}
@@ -117,18 +135,19 @@
 					//松开小滑块的时候将手机移动事件恢复
 					SecPhone.addEventListener('mousedown',bigPhoneDown);
 				}
+				
 			}
 			
 		})
 		//移动手机
 		var bigDisX=0;
-		var bigDisY=0;
 		SecPhone.addEventListener('mousedown',bigPhoneDown);
 		function bigPhoneDown(ev){
 			bigDisX=ev.pageX-SecPhone.offsetLeft;
 			bigDisY=ev.pageY-SecPhone.offsetTop;
-			SecPhone.addEventListener('mousemove',bigPhoneMove);
-			SecPhone.addEventListener('mouseup',bigPhoneUp);
+			SecPhoneBj.addEventListener('mousemove',bigPhoneMove);
+			SecPhoneBj.addEventListener('mouseup',bigPhoneUp);
+			ev.preventDefault();
 		}
 		function bigPhoneMove(ev){
 			var bigPL=ev.pageX-bigDisX;
@@ -137,8 +156,8 @@
 			SecPhone.style.top=bigPT+'px';
 		}
 		function bigPhoneUp(){
-			SecPhone.removeEventListener('mousemove',bigPhoneMove);
-			SecPhone.removeEventListener('mouseup',bigPhoneUp);
+			SecPhoneBj.removeEventListener('mousemove',bigPhoneMove);
+			SecPhoneBj.removeEventListener('mouseup',bigPhoneUp);
 		}
 		//鼠标移开2秒后隐藏大手机，显示小手机
 		bigPhone.addEventListener('mouseout',function(){
@@ -147,6 +166,7 @@
 		//公共的关闭大手机
 		function closeBigPhone(){
 			SecPhone.style.display='none';
+			SecPhoneBj.style.display='none';
 			bigPhone.style.display='none';
 			phone.style.display='block';
 		}

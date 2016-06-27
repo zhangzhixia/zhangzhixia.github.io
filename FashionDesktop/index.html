@@ -60,6 +60,7 @@
 					<div id="phone" class="phone"></div>
 				</div>
 			</section>
+			<section id="SecPhoneBj">
 			<section id="SecPhone">
 				<div class="phoneList">
 					<div id="bigPhone">
@@ -84,6 +85,7 @@
 						</div>
 					</div>
 				</div>
+			</section>
 			</section>
 		</section>
 		<section id="rightTmc">
@@ -167,10 +169,10 @@
 				$('#scale').html(scale+'%')
 				if(num == Imgs.length){
 					setTimeout(function(){
-						// $('#leftRightImg').css({
-						// 	opacity:0,
-						// 	display:'none'
-						// })
+						$('#leftRightImg').css({
+							opacity:0,
+							display:'none'
+						})
 					},300)
 				}
 			}
@@ -178,10 +180,10 @@
 				num++;
 				if(num == Imgs.length){
 					setTimeout(function(){
-						// $('#leftRightImg').css({
-						// 	opacity:0,
-						// 	display:'none'
-						// })
+						$('#leftRightImg').css({
+							opacity:0,
+							display:'none'
+						})
 					},300)
 				}
 			}
