@@ -13,6 +13,7 @@
 </head>
 <body>
 	<div id="leftRightImg">
+	<span id="scale"></span>
 		<span id="pngLine"></span>
 		<div id="Png"></div>
 	</div>
@@ -160,9 +161,7 @@
 			oImg.onload=function(){
 				num++;
 				var scale = Math.floor((num/Imgs.length)*100);
-				$('#Png').animate({marginLeft:scale},function(){
-					$('#Png').animate({marginLeft:-100});
-				})
+				$('#scale').html(scale+'%')
 				if(num == Imgs.length){
 					setTimeout(function(){
 						$('#leftRightImg').css({
