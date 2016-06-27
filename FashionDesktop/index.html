@@ -113,12 +113,49 @@
 	<script type="text/javascript" src="js/viewer.min.js"></script>
 <script type="text/javascript">
 	$(function(){
-		setTimeout(function(){
-			$('#leftRightImg').css({
-				opacity:0,
-				display:'none'
-			})
-		},6000)
+		var Imgs=[
+			'img/leftRightIco.png',
+			'img/goBack.png',
+			'img/wooden_table.jpg',
+			'img/imac.png',
+			'img/imac.png',
+			'img/item_icons_map.png',
+			'img/item_icons_map.png',
+			'img/item_icons_map.png',
+			'img/item_icons_map.png',
+			'img/item_icons_map.png',
+			'img/item_icons_map.png',
+			'img/item_icons_map.png',
+			'img/item_icons_map.png',
+			'img/item_icons_map.png',
+			'img/iphone.png',
+			'img/iphone_large2.png',
+			'img/huakuai.png',
+			'img/player_icons.png',
+			'img/dilei.png',
+			'img/guzhang.png',
+			'img/dilei.png',
+			'img/guzhang.png',
+			'img/qqbg.png',
+			'img/qqbg.png',
+			'img/qqIndex.png'
+		];
+		var num=0;
+		for(var i=0;i<Imgs.length;i++){
+			var oImg=new Image();
+			oImg.src=Imgs[i];
+			oImg.onload=function(){
+				num++;
+				var scale = Math.floor((num/Imgs.length)*100);
+				$('#Png').animate({marginLeft:90},500);
+				setTimeout(function(){
+					$('#leftRightImg').css({
+						opacity:0,
+						display:'none'
+					})
+				},300)
+			}
+		}
 		$('#goBack').click(function(){
 			window.open('main.html')
 		})

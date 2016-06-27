@@ -66,7 +66,63 @@
 <script type="text/javascript" src="js/jquery.min.1.7.js"></script>
 <script type="text/javascript">
 $(function(){
-	
+	var imgs=['img/cursor.cur',
+			  'img/clock.png',
+			  'img/mjslogo.png',
+			  'img/bg_home.jpg',
+			  'img/logo.png',
+			  'img/handcursor.cur',
+			  'img/clickSuprice.png',
+			  'img/avatar_normal.png',
+			  'img/avatar_reaction.png',
+			  'img/handcursor.cur',
+			  'img/screen_normal.png',
+			  'img/screen_full.png',
+			  'img/qp.png',
+			  'img/handcursor.cur',
+			  'img/stereo.svg',
+			  'img/type_blue.svg',
+			  'img/type_green.svg',
+			  'img/type_orange.svg',
+			  'img/bubble_black.png',
+			  'img/bubble_green.png',
+			  'img/bubble_violet.png',
+			  'img/bubble_orange_large.png',
+			  'img/bubble_green_right.png',
+			  'img/bubble_blue_right.png',
+			  'img/bubble_violet_large.png',
+			  'img/bubble_red.png',
+			  'img/bubble_blue.png',
+			  'img/bubble_orange.png',
+			  'img/bubble_red_right.png'
+			  ];
+	var num=0;
+	for(var i=0;i<imgs.length;i++){
+		var oImg=new Image();
+		oImg.src = imgs[i];
+		oImg.onload=function(){
+			num++;
+			// alert(num)
+			var scale = Math.floor((num/imgs.length)*100);
+			console.log(scale)
+			$('#load').html(scale+'%');
+			if(num == imgs.length){
+				$('#wrapLoad').animate({opacity:0},100);
+				setTimeout(function(){
+					$('#wrapLoad').css('display','none');
+				},100)
+			}
+		}
+		oImg.onerror = function(){
+			num++;
+			if(num == imgs.length){
+				$('#wrapLoad').animate({opacity:0},100);
+				setTimeout(function(){
+					$('#wrapLoad').css('display','none');
+				},100)
+			}
+		}
+	}
 
 
 	  getData();
@@ -82,54 +138,21 @@ $(function(){
         var vday=d.getDate();
         var h = d.getHours();
         var m = d.getMinutes();
-        console.log(vyear,vmonth)
+        // console.log(vyear,vmonth)
         $('#year').html(vyear);
         $('#month').html(dateArr[vmonth-1]);
         $('#day').html(vday);
         $('#hour').html(h+':'+m);
      }
-
-	//加载进度
-		 var etControl = {};
-		 var count = 0;
-		 etControl.process=function(config){
-			this.updateProcess=function(percent){
-				setTimeout(function(){
-					$('#load').html(percent+'%');
-				},++count*500);
-				if(percent==100){
-					// 100%就从页面移除loading标签
-					setTimeout(function(){
-						$('#wrapLoad').animate({opacity:0},500);
-						setTimeout(function(){
-							$('#wrapLoad').css('display','none');
-						},800)
-					},count*500+800);
-				}
-			}
-		}
-	var p = new etControl.process();
-    var arr=[0,34,62,67,79,90,100];
-    var i=-1;
-	var setTime=setInterval(function(){
-		i++;
-		if(i>=arr.length){
-			i=100;
-			clearInterval(setTime);
-		}else{
-			p.updateProcess(arr[i]);
-		}
-   		
-   },50)
-	var iw=$(window).innerWidth();
-	var ih=$(window).innerHeight();
-	var divw=$('#dnImg').outerWidth();
-	var divh=$('#dnImg').outerHeight();
-	$('#dnImg').css({
-		top:(ih-divh)/2,
-		left:(iw-divw)/2
-	});
-})
+		var iw=$(window).innerWidth();
+		var ih=$(window).innerHeight();
+		var divw=$('#dnImg').outerWidth();
+		var divh=$('#dnImg').outerHeight();
+		$('#dnImg').css({
+			top:(ih-divh)/2,
+			left:(iw-divw)/2
+		});
+	})
 	$('#dnImg a').eq(0).on('click',function(){
 		$('#zzc').css({
 			display:'none',

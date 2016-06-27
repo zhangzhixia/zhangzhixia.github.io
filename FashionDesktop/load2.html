@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <title></title>
+<style>
+body{
+	/*background: url('http://nizp.net/wroks_img/bg.jpg') no-repeat;*/
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+#mark{
+	background:#000;
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	transition: 1s;
+}
+
+#div1{
+	height: 30px;
+	width:400px;
+	border:1px solid #fff;
+	position:relative;
+	z-index:9999;
+	
+}
+#div2{
+	height: 30px;
+	background: red;
+	/*width:40px;*/
+	position: absolute;
+	top:0;
+	left:0;
+}
+span{
+	position:absolute;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index: 999;
+	text-align: center;
+	line-height:30px;
+	color: #fff;
+}
+</style>
+</head>
+<body>
+	<div id="mark"></div>
+   	<div id="div1">
+		<span id="span1">0%</span>
+		<div id="div2"></div>
+	</div>
+	<img src=""/>
+<script type="text/javascript">
+	var div1 = document.getElementById('div1');
+	var div2 = document.getElementById('div2');
+	var span = document.getElementById('span1');
+	var mark = document.getElementById('mark');
+	
+	mark.style.cssText = 'height:'+window.innerHeight+'px;';
+	/*
+		0-76    77
+		
+	*/
+	var num = 0;
+	var arr = [];
+	// for(var i=0;i<77;i++){
+	// 	arr.push('http://nizp.net/wroks_img/'+i+'.jpg');
+	// }
+	
+	// var arr2 = [
+	// 	'http://nizp.net/imges/7.jpg',
+	// 	'http://nizp.net/imges/7.png',
+	// 	'http://nizp.net/wroks_img/bg.jpg'
+	// ];
+	var arr2=['img/cursor.cur',
+			  'img/clock.png',
+			  'img/mjslogo.png',
+			  'img/bg_home.jpg',
+			  'img/logo.png',
+			  'img/handcursor.cur',
+			  'img/clickSuprice.png',
+			  'img/avatar_normal.png',
+			  'img/avatar_reaction.png',
+			  'img/handcursor.cur',
+			  'img/screen_normal.png',
+			  'img/screen_full.png',
+			  'img/qp.png',
+			  'img/handcursor.cur',
+			  'img/stereo.svg',
+			  'img/type_blue.svg',
+			  'img/type_green.svg',
+			  'img/type_orange.svg',
+			  'img/bubble_black.png',
+			  'img/bubble_green.png',
+			  'img/bubble_violet.png',
+			  'img/bubble_orange_large.png',
+			  'img/bubble_green_right.png',
+			  'img/bubble_blue_right.png',
+			  'img/bubble_violet_large.png',
+			  'img/bubble_red.png',
+			  'img/bubble_blue.png',
+			  'img/bubble_orange.png',
+			  'img/bubble_red_right.png'
+			  ];
+	
+	// var arr3 = arr.concat(arr2);
+	
+	//console.log(arr3);
+	
+	for(var i=0;i<arr2.length;i++){
+		var oImg = new Image();
+		oImg.src = arr2[i];
+		oImg.onload = function(){
+			console.log(2222222222)
+			num++;
+			var scale = Math.floor((num/arr2.length)*100);
+			
+			console.log(scale)
+			
+			div2.style.width = scale*4 + 'px';
+			span.innerHTML = scale + '%';
+			if(num == arr2.length){
+				
+				mark.style.opacity = 0;
+				setTimeout(function(){
+					mark.style.display = 'none';
+				},1000)
+				
+				//alert(1)
+				//document.body.style.background = 'url(http://nizp.net/wroks_img/bg.jpg)';
+			}
+			
+			
+		}
+		oImg.onerror = function(){
+			num++;
+			if(num == arr2.length){
+				document.body.style.background = 'img/clock.png';
+			}
+		}
+	}
+	
+	
+	
+	
+	
+</script>
+</body>
+</html>
