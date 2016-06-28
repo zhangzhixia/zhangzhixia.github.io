@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>zzx的响应式网页</title>
+		<!-- Bootstrap -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<style>
+			body {
+				padding-top: 50px;
+				padding-bottom: 50px;
+			}
+			.carousel {
+				height: 550px;
+				margin-bottom: 20px;
+			}
+			.carousel .item {
+				height: 550px;
+			}
+			.carousel .item img {
+				width: 100%;
+			}
+			.container .row {
+				text-align: center;
+			}
+			.hr-class {
+				margin: 50px 0px;
+			}
+			.ownimg{
+				padding-top:30px;
+			}
+			.mydiv{
+				padding: 30px 0;
+			}
+			.h2{
+				font-size: 30px;
+				color: deepskyblue;
+				margin-top: 50px;
+			}
+			.h2-span{
+				font-size:25px;
+				color: gray;
+			}
+			.spanTxt{
+				line-height: 30px
+			}
+		</style>
+
+	</head>
+
+	<body>
+	<script type="text/javascript" src="../js/artTemlate.js" ></script>
+
+		<!--导航-->
+		<nav class="navbar  navbar-fixed-top navbar-inverse">
+			<div class="container">
+				<!-- 手机上进行显示的时候自适应出现‘三’图标 -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example`" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!--LOGO商标-->
+					<a class="navbar-brand" href="#">家有萌宠</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">综述</a></li>
+						<li><a href="#">简述</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">详情 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-header">头部标题</li>
+								<li><a href="#tianxie">萌宠介绍</a></li>
+								<li><a href="#fish">萌宠走红</a></li>
+								<li><a href="#jinniu">名字来源</a></li>
+							</ul>
+						</li>
+						<li><a href="#" data-toggle="modal" data-target="#about">关于</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</nav>
+		<!--图片滚动-->
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			</ol>
+
+			<div class="carousel-inner" role="listbox">
+
+				<div class="item active">
+					<img src="../imgs/hxp2.jpeg" alt="双鱼座">
+					<div class="carousel-caption">
+						<p>红小胖snoopy</p>
+					</div>
+				</div>
+
+				<div class="item">
+					<img src="../imgs/hxp1.jpg" alt="蝎子">
+					<div class="carousel-caption">
+						<p>红色虎斑异国短毛猫</p>
+					</div>
+				</div>
+
+				<div class="item">
+					<img src="../imgs/hxp2.jpeg" alt="金牛座">
+					<div class="carousel-caption">
+						<p>喜欢吃饭、睡觉、玩、看电视。</p>
+					</div>
+				</div>
+
+			</div>
+			<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+
+			<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+				<span class="sr-only">Next</span>
+			</a>
+
+		</div>
+		<!--栅格-->
+		<div class="container">
+			<div class="row" id="teml01">
+			</div>
+			<hr class="hr-class">
+				<!--切换标签页 start-->
+			<ul class="nav nav-tabs" role="tablist" id="tab-list">
+				<li class="active"><a role="tab" data-toggle="tab" href="#tianxie">萌宠介绍</a></li>
+				<li><a role="tab" data-toggle="tab" href="#jinniu">名字来源</a></li>
+				<li><a role="tab" data-toggle="tab" href="#fish">萌宠走红</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active" id="tianxie">
+					<div class="row mydiv">
+					<div class="col-md-3">
+						<img class="img-responsive ownimg" src="../imgs/hxpx1.jpg">
+					</div>
+					<div class="col-md-9" id="date201">
+					</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="jinniu">
+					<div class="row mydiv">
+					<div class="col-md-9" id="date202">
+					</div>
+					<div class="col-md-3">
+						<img class="img-responsive ownimg" src="../imgs/hxpx3.jpg">
+					</div></div>
+				</div>
+				<div class="tab-pane" id="fish">
+					<div class="row mydiv">
+					<div class="col-md-3">
+						<img class="img-responsive ownimg" src="../imgs/hxpx2.jpg">
+					</div>
+					<div class="col-md-9" id="date203">
+					</div></div>
+				</div>
+			</div>
+			<!--切换标签页 end-->
+			<hr class="hr-class">
+				<footer>
+					<p class="pull-right"><a href="#">回到顶部</a></p>
+					<p>© 2016/6/28 张志霞</p>
+				</footer>
+		</div>
+		<div class="modal fade" id="about">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span>
+							<span class="sr-only">关闭</span>
+						</button>
+					</div>
+					<div class="modal-body">	
+						<h4 class="modal-title">网站介绍</h4>
+						<p></p>
+						<p>本网站完全为练习<strong>BootStrap</strong>框架与<strong>artTemplate</strong>渲染数据准备!</p>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-default" data-dismiss="modal">I Know </button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/jquery-2.1.4.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script>
+			$(function(){
+				$("#bs-example .dropdown-menu a").click(function(){
+					var href=$(this).attr("href");
+					$("#tab-list a[href='"+href+"']").tab("show");
+				})
+				var jsonDate1={
+					name:[
+						{n:'萌宠-喵星人'},
+						{n:'萌宠-汪星人'},
+						{n:'萌宠-红小胖'}
+					],
+					count:[
+						{
+							cou:'网络语言，将猫猫们戏称是从遥远外太空来的，喵星球来到地球的外星人，因为很萌的外表而获得人类的信任，成为少数与人类平等交往的朋友。死敌是汪星人(狗狗)。最喜爱的食物是吱星人(老鼠)和鱼星人。'
+						},
+						{
+							cou:'网络流行语，最初将狗狗戏称是从遥远外太空的汪星球来到地球的外星人，利用很萌的外表骗取人类的信任。然后出其不意的占有地球的骨头资源。汪星人已经成为了爱卖萌，有爱心，容易取得别人信任的男士最新称号。'
+						},
+						{
+							cou:'"Snoopy"不再是那只长耳朵小狗的专属名词。这只名叫"Snoopy"的萌猫在微博上抢尽了风头。"2011年5月，偶在北京出生了。偶有一个哥哥一个妹妹。15天大的我和兄弟姐妹，还有偶滴世界冠军爸爸的合影。'
+					    }
+					]
+				}
+				var jsonDate2={
+					'title':[
+						{'tit':'萌宠介绍'},
+						{'tit':'名字来源'},
+						{'tit':'小胖走红'}
+					],
+					'content':{
+						cont1:{
+							'name':'红小胖snoopy',
+							'pinzhong':'红色梵纹异国短毛猫',
+							'birth':'2011年5月11日',
+							'weight':'7斤(增长中)',
+							'len':'26厘米(增长中)',
+							'loveFood':'牛肉、羊奶',
+							'loveSpace':'沙发、床、主人身上',
+							'loveDo':'吃饭、睡觉、玩、看电视'
+						},
+						cont2:'2011年5月11日，snoopy在北京出生，10月28日坐飞机来到了成都。加菲猫属于异国短毛猫下的一个分支品种。snoopy拥有CFA的血统证，能持有血统证的猫必须是父母双方都是CFA(国际爱猫联合会)注册，并且有8代清晰血统。老爸elvis是从美国来中国的CFA的世界冠军，很长一段时间都是国内唯一一只世界冠军头衔的异短公猫。它的繁育者说，snoopy是elvis来中国后繁育的后代里最像爸爸的一只。"它遗传了爸爸的梵纹，难得的是纯净梵纹，头顶和尾巴一个颜色，身体雪白，这个颜色在加菲里比较少见，好的更少。"宁小姐说，而snoopy的毛色像妈妈，妈妈带红色基因，所以有朋友叫它红小胖。',
+						cont3:[
+							{
+								co:'Snoopy"不再是那只长耳朵小狗的专属名词。这只名叫"Snoopy"的萌猫在微博上抢尽了风头。"2011年5月，偶在北京出生了。偶有一个哥哥一个妹妹。15天大的我和兄弟姐妹，还有偶滴世界冠军爸爸的合影。"2011年11月，"红小胖Snoopy"正式在新浪开设了自己的微博。每天在微博上晒各种萌照便成了这只加菲猫的主要生活。当然，作为一只萌猫，"猫生"的丰富活动远远不止这些。爱睡小胖登上杂志小胖登上杂志懒觉，爱舔毛，所有猫的爱好在这只Snoopy身上都能找到。'
+							},
+							{
+								co:'Snoopy的走红源于一组照片"真正的美猫不怕被湿身，不怕头发被弄乱"，照片详细记录了Snoopy洗澡的全过程:搁进一只粉色大桶，从冲水到打泡泡，Snoopy都乖乖的蹲在桶里"服从安排"。最终被吹干了毛，又恢复到了绒毛蓬松一脸无辜的乖巧模样，一下子迷倒众生，抢走了猫叔的不少粉丝。'
+							}
+						]
+						
+					}
+				}
+				console.log(jsonDate2)
+
+				var html1=template('date1',jsonDate1);
+				$('#teml01').html(html1);
+				var html2=template('date2',jsonDate2);
+				$('#date201').html(html2);
+				var html3=template('date3',jsonDate2);
+				$('#date202').html(html3);
+				var html3=template('date4',jsonDate2);
+				$('#date203').html(html3);
+			})
+		</script>
+		<script type="text/html" id="date1">
+			<%for(var i=0;i<name.length;i++){%>
+				<div class="col-md-4">
+					<h2><%=name[i].n%></h2>
+					<p><%=count[i].cou%></p>
+					<button class="btn-success">了解更多</button>
+				</div>
+			<%}%>
+		</script>
+		<script type="text/html" id="date2">
+			<h2 class="h2"><%=title[0].tit%><span class="h2-span"><%=title[0].tit%></span></h2>
+			<p>名字:<%=content.cont1.name%></p>
+			<p>品种:<%=content.cont1.pinzhong%></p>
+			<p>生日:<%=content.cont1.birth%></p>
+			<p>体重:<%=content.cont1.weight%></p>
+			<p>身长:<%=content.cont1.len%></p>
+			<p>喜欢的食物:<%=content.cont1.loveFood%></p>
+			<p>喜欢待的地方:<%=content.cont1.loveSpace%></p>
+			<p>喜欢做的事:<%=content.cont1.loveDo%></p>
+		</script>
+		<script type="text/html" id="date3">
+			<h2 class="h2"><%=title[1].tit%><span class="h2-span"><%=title[1].tit%></span></h2>
+			<p class="spanTxt"><%=content.cont2%></p> 
+		</script>
+		<script type="text/html" id="date4">
+			<h2 class="h2"><%=title[2].tit%><span class="h2-span">红小胖加菲猫走红</span></h2>
+			<p class="spanTxt"><%=content.cont3[0].co%></p>
+			<p class="spanTxt"><%=content.cont3[1].co%></p>
+		</script>
+	</body>
+
+</html>

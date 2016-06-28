@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-1.8.3.min.js"></script>
+		<style type="text/css">
+			.bigdiv {
+				width: 200px;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="bigdiv">
+			<img src="../imgs/cat.jpg" id="myImg">
+			<br/>
+			<button type="button" id="maxbtn">放大</button>
+			<button id="minbtn" type="button">缩小</button><br />
+		</div>
+		<img src="../imgs/dog2.jpg" id="mydog" style="position: absolute;"><br />
+			<button id="rightbtn" type="button" style="margin-top: 250px;">向右滑</button>
+		<script>
+			window.onload = function() {
+				$("#maxbtn").click(function() {
+					maxFun();
+				});
+				var img = document.getElementById("myImg");
+				
+				var maxWidth = img.width * 3;
+
+				function maxFun() {
+					var endWidth = img.width * 1.3;
+				
+					var maxTimer = setInterval(function() {
+						if (img.width < endWidth) {
+							if (img.width < maxWidth) {
+								img.width = img.width * 1.05;
+								img.height = img.height * 1.05;
+							} else {
+								alert("图片已到最大限度显示！")
+								clearInterval(maxTimer);
+							}
+						} else {
+							clearInterval(maxTimer);
+						}
+					}, 20);
+				}
+				
+				$("#minbtn").click(function(){
+					minFun();
+				})
+				var minWidth=img.width*0.2;
+				function minFun(){
+					var endminWidth=img.width*0.5;
+					var minTime=setInterval(function(){
+						if(img.width>endminWidth){
+							if(img.width>minWidth){
+								img.width=img.width*0.95;
+								img.height=img.height*0.95;
+							}else{
+								alert("图片已缩小到最大限度！");
+								clearInterval(minTime);
+							}
+						}else{
+							clearInterval(minTime);
+						}
+						
+					},20);
+				}
+				var dogImg = document.getElementById("mydog");
+				$("#rightbtn").click(function(){
+					rightFun();
+				});
+				var maxright=1000;
+				function rightFun(){
+					var endright=dogImg.offsetLeft + 300; 
+					var rightTime=setInterval(function(){
+						var imgLeft=dogImg.offsetLeft;  
+						if(imgLeft<endright){
+							if(imgLeft<maxright){
+								dogImg.style.left=imgLeft+ 20 +'px';
+							}else{
+								alert("图片意向右移动到最`大限度");
+								clearInterval(rightTime);
+							}
+						}else{
+							clearInterval(rightTime);
+						}
+							
+							
+					},20);
+				}
+				
+			}
+		</script>
+	</body>
+
+</html>
