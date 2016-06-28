@@ -219,12 +219,13 @@ $('#autoPlay').click(function(){
 			if(bjTrack.offsetTop>=iH){
 				clearInterval(timeAuto);
 			}
+			setShuffshow(bjTrack.offsetTop);
 			MusicFn(bjTrack.offsetTop);
 			BigScreen(bjTrack.offsetTop);
 			twoScreen(bjTrack.offsetTop);
 			//枪战动画
 			drugFire(bjTrack.offsetTop);
-		},100)
+		},120)
 		
 	}else{
 		auto=true;
@@ -296,7 +297,15 @@ function TotGun(){
 				$('#section1_scroll').animate({opacity:100},50);
 				$('#section1_arrow').animate({bottom:'100px',opacity:100},50);
 				$('#section1_better').animate({bottom:'20px',opacity:100},120);
-				$('.opacity').animate({opacity:100},30);
+//				$('.opacity').animate({opacity:0},30);
+				$('#shuffle1_zev').animate({opacity:100},30);
+				$('#shuffle2_sport').animate({opacity:100},30);
+				$('#shuffle3_4wd').animate({opacity:100},30);
+				$('#shuffle4_auto').animate({opacity:100},30);
+				$('#shuffle5_4wd2').animate({opacity:100},30);
+				$('#shuffle6_zev2').animate({opacity:100},30);
+				$('#shuffle7_auto2').animate({opacity:100},30);
+				$('#shuffle8_zev3').animate({opacity:100},30);
 			},100)
 			twoScreen(bjTrack.offsetTop);
 			//枪战动画
@@ -333,9 +342,10 @@ function TotGun(){
 				'target': {'bottom':-30, 'opacity':0}
 			};
 			mTween(obj2);
-			setTimeout(function(){
-				$('.opacity').animate({opacity:0},30);
-			},100)
+			setShuffshow(bjTrack.offsetTop);
+//			setTimeout(function(){
+//				$('.opacity').animate({opacity:100},30);
+//			},100)
 			//设置音频
 			var offsetTop=bjTrack.offsetTop;
 			MusicFn(offsetTop);
@@ -348,11 +358,38 @@ function TotGun(){
 		BigScreen(offsetTop)
 	})
 }
+function setShuffshow(offsetTop){
+	if(offsetTop>=45){
+			    $('#shuffle1_zev').animate({opacity:0},30);
+			}
+			if(offsetTop>=132){
+				$('#shuffle2_sport').animate({opacity:0},30);
+			}
+			if(offsetTop>=198){
+				$('#shuffle3_4wd').animate({opacity:0},30);
+			}
+			if(offsetTop>=290){
+				$('#shuffle4_auto').animate({opacity:0},30);
+			}
+			if(offsetTop>=345){
+				$('#shuffle5_4wd2').animate({opacity:0},30);
+			}
+			if(offsetTop>=420){
+				$('#shuffle6_zev2').animate({opacity:0},30);
+			}
+			if(offsetTop>=488){
+				$('#shuffle7_auto2').animate({opacity:0},30);
+			}
+			if(offsetTop>=560){
+				$('#shuffle8_zev3').animate({opacity:0},30);
+			}
+}
 function MusicFn(offsetTop){
 	if(offsetTop==14){
-		PlayMusic('../music/chuaimen.ogg');
+		PlayMusic('../music/chuaiMen.ogg');
 	}else if(offsetTop==40 || offsetTop==132 || offsetTop==198 
-		|| offsetTop==290 || offsetTop==345 || offsetTop==488){
+		|| offsetTop==290 || offsetTop==345 || offsetTop==420 || offsetTop==488
+		|| offsetTop==560 ){
 		PlayMusic('../music/cutModel01.ogg');
 	}else if(offsetTop==50){
 		PlayMusic('../music/nerverBg1.ogg');
@@ -562,10 +599,15 @@ function twoScreen(offsetTop){
 		}
 		if(offsetTop>=204&&offsetTop<=222){
 			var Img5=(offsetTop-204)/18;
+//			console.log(Img5)
 			$('#section8').css({left:(iW*-Img5)})
 		}else if(offsetTop>=222&&offsetTop<=238){
 			var Img6=(offsetTop-223)/15;
 			$('#section8').css({left:(-iW)+(iW*-Img6)});
+//			var le=$('#section8').css('left');
+//			if(Img6==-2732){
+//				$('#section8').css({left:-2740});
+//			}
 			$('#section9').css({left:(iW*-Img6)})
 		}else if(offsetTop>=239&&offsetTop<=254){
 			var Img8=(offsetTop-239)/15;

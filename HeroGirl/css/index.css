@@ -406,6 +406,7 @@ img{
 	margin-top: -349px;
     transform: rotate(0deg);
 	transition:.2s;	
+	border-radius: 12%;
 }
 #section9_girl{
 	position: absolute;

@@ -62,8 +62,8 @@
 						</div> 
 						<div id="shuffle1"	class="section">
 							<div id="shuffle1_content" class="shuffle1_content ">
-								<img id="shuffle1_zev" class="opacity zev sec_bg shuffle_show" src="../img/shuffle/zev.jpg"/>
-								<img id="shuffle1_sport" class="sport sec_bg shuffle_hide" src="../img/shuffle/sport.jpg"/>
+								<img id="shuffle1_zev" class="opacity zev sec_bg shuffle_show" src="../img/shuffle/sport.jpg"/>
+								<img id="shuffle1_sport" class="sport sec_bg shuffle_hide" src="../img/shuffle/zev.jpg"/>
 								<!--<div class="shuffle_button"></div>-->
 							</div>
 						</div>
@@ -242,8 +242,8 @@
 						</div>
 						<div id="shuffle8" class="section">
 							<div id="shuffle8_content" class="shuffle_content">
-								<img id="shuffle8_zev3" class="opacity sec_bg" src="../img/shuffle/zev3.jpg" />
-								<img id="shuffle8_sport2" class="sec_bg" src="../img/shuffle/sport2.jpg" />
+								<img id="shuffle8_zev3" class="opacity sec_bg shuffle_show" src="../img/shuffle/zev3.jpg" />
+								<img id="shuffle8_sport2" class="sec_bg shuffle_hide" src="../img/shuffle/sport2.jpg" />
 								<div class="shuffle_button"></div>
 							</div>
 						</div>
@@ -277,7 +277,9 @@
 		</div>
 	</div>
 
-	<div id="audioDiv"></div>
+	<div id="audioDiv">
+		<audio src="../music/tupinLoading.ogg" loop="loop" autoplay="autoplay"></audio>
+	</div>
 	<script type="text/javascript">
 		var vertic1=document.getElementById('verticScrollArea');
 		var Vdivs=vertic1.children;
@@ -346,6 +348,7 @@
 					width:W+'px'
 				})
 				$('#loadScale').html(scale+'%');
+//				PlayMusic('../music/tupinLoading.ogg');
 				if(num==totArrImg.length){
 					$('#loadMain').animate({opacity:0},500);
 					setTimeout(function(){
@@ -362,6 +365,17 @@
 					},800);
 				}
 			}
+//			function PlayMusic(src){
+//	//IsCreateAudio为真才可以创建音乐，防止前面音乐暂停了，滚到后面有音乐的图后会继续播放
+//	//音乐跟距滚动条距离顶部的高度，配合情景图片来创建的
+//		var audioDiv=document.getElementById('audioDiv');
+//		var audio = document.createElement('audio');
+//		audio.src = src;//这里放音乐的地址
+//		audio.autoplay=true;
+//
+//		audioDiv.appendChild(audio)
+//	
+//}
 		}
 	</script>
 </body>
