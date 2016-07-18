@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<title>无标题文档</title>
+<script src="m.touch.js"></script>
+<style>
+html,
+body
+{
+	position: relative;
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+}
+#box {
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	-webkit-perspective: 300px;
+	perspective: 300px;
+	margin: 100px auto;
+}
+#div {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+#div span {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	font-size: 60px;
+	text-align: center;
+	line-height: 200px;
+	color: #fff;
+	/*-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;*/
+}
+#div span:nth-of-type(1) {
+	top: 0;
+	left: 0;
+	background: #F39;
+	-webkit-transform: translateZ(100px);
+	transform: translateZ(100px);
+}
+#div span:nth-of-type(2) {
+	top: 0;
+	left: 200px;
+	background: #C90;
+	-webkit-transform-origin: left;
+	transform-origin: left;
+	-webkit-transform: translateZ(100px)  rotateY(90deg) ;
+	transform: translateZ(100px) rotateY(90deg);
+		-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+#div span:nth-of-type(3) {
+	top: 0;
+	left: 0;
+	background: #9FF;
+	-webkit-transform: translateZ(-100px) rotateY(180deg);
+	transform: translateZ(-100px) rotateY(180deg);
+
+}
+#div span:nth-of-type(4) {
+	top: 0;
+	left: -200px;
+	background: #3C6;
+	-webkit-transform-origin: right;
+	transform-origin: right;
+	-webkit-transform: translateZ(100px) rotateY(-90deg);
+	transform: translateZ(100px) rotateY(-90deg);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+#div span:nth-of-type(5) {
+	top: -200px;
+	left: 0px;
+	background: #3FF;
+	-webkit-transform-origin: bottom;
+	transform-origin: bottom;
+	-webkit-transform: translateZ(100px) rotateX(90deg);
+	transform: translateZ(100px) rotateX(90deg);
+}
+#div span:nth-of-type(6) {
+	top: 200px;
+	left: 0px;
+	background: #633;
+	-webkit-transform-origin: top;
+	transform-origin: top;
+	-webkit-transform: translateZ(100px) rotateX(-90deg);
+	transform: translateZ(100px) rotateX(-90deg);
+}
+</style>
+</head>
+<body>
+<script>
+document.body.style.height = document.documentElement.clientHeight + "px";
+</script>
+<div id="box">
+	<div id="div">
+    	<span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+    </div>
+</div>
+<script>
+var box =document.querySelector("#box");
+var div =document.querySelector("#div");
+var boxScroll = new MScroll(
+	{
+		element: box,
+		dir: "both",
+		isOver: false,
+		offMove: true
+	}
+);
+boxScroll.backout = 0;
+css(div,"translateZ",-100);
+boxScroll.onscroll = function(){
+	var scale = 200/90;
+	var iX = this.iScroll.x/scale;
+	var iY = this.iScroll.y/scale;
+	var rotateX = -iY;
+	var rotateY = iX;
+	if(rotateX< -45) {
+		rotateX = -45;
+		this.iScroll.y = -rotateX;
+	}
+	if(rotateX> 45){
+		rotateX = 45;
+		this.iScroll.y = -rotateX;
+	}
+	css(div,"rotateX",rotateX);
+	css(div,"rotateY",rotateY);
+};
+</script>
+</body>
+</html>

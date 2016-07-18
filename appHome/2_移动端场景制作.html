@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<title>无标题文档</title>
+<script>
+var html = document.querySelector("html");
+var width = html.getBoundingClientRect().width;
+html.style.fontSize = width/16 + "px";
+</script>
+<style>
+@-webkit-keyframes icon {
+	0%{
+		-webkit-transform: translateY(0);
+		opacity: 1;
+	}
+	50% {
+		-webkit-transform: translateY(1rem);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateY(1rem);
+		opacity: 0;
+	}
+}
+@keyframes icon {
+	0%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+	50% {
+		transform: translateY(1rem);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(1rem);
+		opacity: 0;
+	}
+}
+html,
+body
+{
+	position: relative;
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	/*font-size: 20px;*/
+}
+.page {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover !important;
+}
+section.page:nth-of-type(1) {
+	background: url(img/page.jpg) no-repeat;	
+}
+section.page:nth-of-type(2) {
+	background: url(img/page2.jpg) no-repeat;	
+}
+section.page:nth-of-type(4) {
+	background: url(img/page4.jpg) no-repeat;	
+}
+.ico {
+	position: absolute;
+	left: 6.3125rem;
+	bottom: 1rem;
+	width: 3.375rem;
+	height: 3.025rem;
+	background: url(img/next.png) no-repeat;
+	background-size: cover;
+	animation: icon 2s infinite linear;
+}
+/*#box {
+	width: 10rem;
+	height: 10rem;
+	background: red;
+}*/
+</style>
+<script src="m.touch.js"></script>
+<script>
+window.onload = function(){
+	var bodyH = document.body.clientHeight;
+	var bodyW = document.body.clientWidth;
+	var section = document.querySelectorAll("section.page");
+	var li = document.querySelectorAll("li.page");
+	for(var i = 0; i < section.length; i++){
+		css(section[i],"translateY",i*bodyH);
+	}
+	MTouch(section).swipeUp(
+		function(){
+			console.log("向上滑下一张");
+		}
+	);
+	MTouch(section).swipeDown(
+		function(){
+			console.log("向下滑上一张");
+		}
+	);
+	for(var i = 0; i < li.length; i++){
+		css(li[i],"translateX",i*bodyW);
+	};
+};
+</script>
+</head>
+<body>
+<script>
+document.body.style.height = document.documentElement.clientHeight + "px";
+</script>
+<section class="page" id="page1">
+	<!--<div id="box"></div>-->
+    <span class="ico"></span>
+</section>
+<section class="page" id="page2"></section>
+<section class="page" id="page3">
+	<ul class="page">
+    	<li class="page"></li>
+        <li class="page"></li>
+        <li class="page"></li>
+        <li class="page"></li>
+    </ul>
+</section>
+<section class="page" id="page4"></section>
+</body>
+</html>
