@@ -19,10 +19,10 @@ $(function(){
 		translateX  = startX + dis; /* .
 		.. + 开始拖拽前元素位置，得到元素当前应该在的位置 */
 		list[0].style.webkitTransform = list[0].style.transform = "translateX("+translateX+"px)";
-		$("body").bind('touchmove',function(e){e.preventDefault()},false)
+		//$("body").bind('touchmove',function(e){e.preventDefault()},false)
 	},false)
 	list[0].addEventListener('touchend',function(){
-		$("body").unbind('touchmove');
+	//	$("body").unbind('touchmove');
 		if(translateX>0){
 			translateX=0;
 
