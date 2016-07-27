@@ -139,7 +139,7 @@ body {
 	top: 2.15rem;
 	left: 0;
 	bottom: 1.95rem;
-	overflow: auto;
+	overflow-x: hidden;
 	width:16rem;
 }
 .imgList {
