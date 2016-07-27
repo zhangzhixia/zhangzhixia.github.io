@@ -22,6 +22,10 @@ $(function(){
 	},false)
 	list[0].addEventListener('touchend',function(){
 		var lisW=list.width()/lis.length;
+		var now = -translateX/lisW; //用当前的移动距离除以一个的宽度得到 移动了几个
+			now = Math.round(now); //四舍五入之后得到停留在第几个
+			translateX = -now*lisW;
+			list[0].style.transition = "400ms";
 		if(translateX>0){
 			translateX=0;
 		}
