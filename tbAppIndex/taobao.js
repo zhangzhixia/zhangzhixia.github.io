@@ -19,19 +19,15 @@ $(function(){
 		translateX  = startX + dis; /* .
 		.. + 开始拖拽前元素位置，得到元素当前应该在的位置 */
 		list[0].style.webkitTransform = list[0].style.transform = "translateX("+translateX+"px)";
-		//$("body").bind('touchmove',function(e){e.preventDefault()},false)
 	},false)
 	list[0].addEventListener('touchend',function(){
-	//	$("body").unbind('touchmove');
+		var lisW=list.width()/lis.length;
 		if(translateX>0){
 			translateX=0;
-
 		}
-		else if(Math.abs(translateX)>=(list.width()-500)){
-			var lisW=list.width()/lis.length;
+		else if(Math.abs(translateX)>=(list.width()-lisW)){
 			translateX=-1*(list.width()-lisW);
 			console.log(list.width()-lisW)
-
 		}
 		console.log(Math.abs(translateX),list.width())
 		list[0].style.webkitTransform = list[0].style.transform = "translateX("+translateX+"px)";
