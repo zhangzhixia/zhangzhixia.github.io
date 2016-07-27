@@ -1,0 +1,1123 @@
+* {
+	-webkit-text-size-adjust: none;
+}
+
+a,
+input,
+button {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-appearance: none;
+}
+
+ul,
+h2,
+h3,
+li,
+p {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+strong {
+	font-weight: normal;
+}
+
+.clearFix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+img {
+	border: none;
+	vertical-align: top;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	font: 0.6rem Arial, "宋体";
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+#header {
+	height: 2.15rem;
+	background: #ff4400;
+	position: relative;
+}
+
+.weixin {
+	width: 1.3rem;
+	height: 1.45rem;
+	background: blue;
+	position: absolute;
+	left: 0.75rem;
+	top: 0.4rem;
+	background: url(img/taobaoIco.png) 0 -0.5rem;
+	background-size: 17.5rem 12.5rem;
+}
+
+.msg {
+	position: absolute;
+	width: 1.35rem;
+	height: 1.65rem;
+	right: 0.65rem;
+	top: 0.25rem;
+	background: url(img/taobaoIco.png) no-repeat -4.9rem -0.5rem;
+	background-size: 17.5rem 12.5rem;
+}
+
+.head_cen {
+	margin-left: 3.1rem;
+	line-height: 2.15rem;
+	width: 8.65rem;
+	font-size: 0.6rem;
+	color: #fff;
+	padding-left: 1.15rem;
+	position: relative;
+}
+
+.icoSeach {
+	position: absolute;
+	left: 0.25rem;
+	top: 0.7rem;
+	width: 0.75rem;
+	height: 0.75rem;
+	background: url(img/taobaoIco.png) no-repeat -1.5rem -0.5rem;
+	background-size: 17.5rem 12.5rem;
+}
+
+.icoCream {
+	position: absolute;
+	right: 0.25rem;
+	top: 0.725rem;
+	width: 0.725rem;
+	height: 0.625rem;
+	background: url(img/taobaoIco.png) no-repeat -2.35rem -0.5rem;
+	background-size: 17.5rem 12.5rem;
+}
+
+.icoFoot {
+	position: absolute;
+	width: 9.8rem;
+	height: 0.225rem;
+	bottom: 0.325rem;
+	left: 0;
+	background: url(img/taobaoIco.png) no-repeat;
+	background-size: 17.5rem 12.5rem;
+}
+
+
+/*淘宝头条模块开始*/
+
+
+#mainImgList{
+	height: 4.975rem;
+}
+#mainImgList li{
+	float: left;
+	width: 16rem;
+	height: 4.975rem;
+}
+.bigImg {
+	width:100%;
+	background-size: 16rem 4.95rem;
+}
+.tbHeadlines {
+	border-bottom: 1px solid #e4e4e4;
+	position: absolute;
+	top: 2.15rem;
+	left: 0;
+	bottom: 1.95rem;
+	overflow: auto;
+	width:16rem;
+}
+.imgList {
+	border: 1px solid #fff;
+	border-top: none;
+	border-bottom: 2px solid #e7e7e7;
+	height: 6.375rem;
+}
+
+.imgList li {
+	float: left;
+	width: 2.175rem;
+	margin: 0.525rem 0.5rem 0;
+}
+
+.imgList li a {
+	display: inline-block;
+	width: 2.15rem;
+}
+
+.imgList img {
+	width: 1.9rem;
+	margin-left: 0.125rem;
+	height: 1.9rem;
+	background-size: 1.9rem 1.9rem;
+}
+
+.imgList h2 {
+	font-size: 0.4rem;
+	color: #7d7d7d;
+	text-align: center;
+	padding-top: 0.05rem;
+}
+
+.news {
+	position: relative;
+	border-bottom: 1px solid #efefef;
+	height: 2rem;
+	padding-top: 0.625rem;
+}
+
+.tbheadLogo {
+	position: absolute;
+	left: 1.075rem;
+	top: 0.35rem;
+}
+
+.tbheadLogo img {
+	width: 2.225rem;
+	height: 1.9rem;
+}
+
+.newList_div {
+	margin-left: 4.075rem;
+	border-left: 1px solid #eaeaea;
+}
+
+.newList {
+	border-left: #f1f1f1;
+	font-size: 0.55rem;
+	color: #000;
+	padding-left: 0.7rem;
+}
+
+.newList li {
+	position: relative;
+}
+
+.newList_li2 {
+	margin-top: 0.25rem;
+}
+
+.circle {
+	position: absolute;
+	width: 0.2rem;
+	height: 0.2rem;
+	left: -0.325rem;
+	top: 0.175rem;
+	background: url(img/taobaoIco.png) no-repeat 0 -0.299rem;
+	background-size: 17.5rem 12.5rem;
+}
+
+
+/*淘宝头条模块结束*/
+
+
+/*淘抢购模块开始*/
+
+.panicBuying {
+	border-top: 0.5rem solid #eee;
+}
+
+.panicL {
+	float: left;
+	width: 5.775rem;
+	border-right: 1px solid #ececec;
+	margin-left: 0.35rem;
+	padding-top: 0.5rem;
+	position: relative;
+}
+
+.panicL h2 {
+	font-size: 0.75rem;
+	color: #fa0000;
+	padding-left: 0.9rem;
+}
+
+.clockIco {
+	position: absolute;
+	width: 0.75rem;
+	height: 0.75rem;
+	left: 0;
+	top: 0.5rem;
+	background: url(img/taobaoIco.png) no-repeat -3.1rem -0.5rem;
+	background-size: 17.5rem 12.5rem;
+}
+
+.panicL p {
+	font-size: 0.5rem;
+	color: #3e3e3e;
+	line-height: 1rem;
+}
+
+.clockNum {
+	position: absolute;
+	width: 2.85rem;
+	height: 0.675rem;
+	left: 0;
+	top: 2.5rem;
+	background: url(img/taobaoIco.png) no-repeat 0 -2rem;
+	background-size: 17.5rem 12.5rem;
+}
+
+.panicL .suboerImg {
+	width: 4.875rem;
+	height: 3.875rem;
+	margin: 1.225rem 0.45rem 0;
+}
+
+.panicR {
+	float: left;
+	width: 9.85rem;
+	padding-top: 0.325rem;
+}
+
+.panicR_top {
+	margin-left: 0.4rem;
+	position: relative;
+}
+
+.panicDivL {
+	float: left;
+	width: 4.8rem;
+}
+
+.panicR_top img {
+	float: left;
+	margin-bottom: 0.35rem;
+	width: 4.225rem;
+	height: 3.025rem;
+}
+
+.panicR_top h2 {
+	font-size: 0.75rem;
+	color: #26b8f9;
+	padding-left: 0.9rem;
+	padding-top: 0.2rem;
+}
+
+.handIco {
+	position: absolute;
+	width: 0.75rem;
+	height: 0.75rem;
+	left: 0;
+	top: 0.2rem;
+	background: url(img/taobaoIco.png) no-repeat -3.9rem -0.5rem;
+	background-size: 17.5rem 12.5rem;
+}
+
+.panicR_top .p1 {
+	font-size: 0.5rem;
+	color: #3e3e3e;
+	line-height: 1rem;
+}
+
+.panicR_top .p2 {
+	font-size: 0.5rem;
+	color: #85ccfb;
+	line-height: 0.55rem;
+}
+
+.panicR_foot {
+	border-top: 1px solid #ececec;
+}
+
+.panicR_foot li {
+	float: left;
+	width: 4.9rem;
+	padding-top: 0.375rem;
+}
+
+.panicR_foot li h3 {
+	font-size: 0.55rem;
+	color: #ff6ea4;
+	padding-left: 1.25rem;
+	position: relative;
+}
+
+.tuziIco {
+	width: 0.6rem;
+	height: 0.6rem;
+	position: absolute;
+	left: 0.4rem;
+	top: -0.025rem;
+	background: url(img/taobaoIco.png) no-repeat -2.35rem -1.3rem;
+	background-size: 17.5rem 12.5rem;
+}
+
+.panicR_foot li p {
+	font-size: 0.5rem;
+	line-height: 0.9rem;
+	color: #8b8b8b;
+	padding-left: 0.4rem;
+}
+
+.panicR_foot li img {
+	width: 2.25rem;
+	height: 2.25rem;
+	margin-left: 1.3rem;
+}
+
+.panicR_li2 {
+	border-left: 2px solid #f1f1f1;
+}
+
+.panicR_foot .panicR_li2 h3 {
+	color: #ff6558;
+}
+
+.baozhenIco {
+	width: 0.55rem;
+	height: 0.6rem;
+	position: absolute;
+	left: 0.4rem;
+	top: -0.025rem;
+	background: url(img/taobaoIco.png) no-repeat -1.5rem -1.3rem;
+	background-size: 17.5rem 12.5rem;
+}
+
+
+/*淘抢购模块结束*/
+
+
+/*超实惠  公共头部开始*/
+
+.commonHead {
+	height: 1.275rem;
+	width: 100%;
+	background: url(img/tbbgPingpu.png) repeat-x;
+	background-size: 0.2rem 1.65rem;
+	padding-top: 0.375rem;
+	text-align: center;
+}
+
+.commonHead h2 {
+	background: #eee;
+	font-size: 0.55rem;
+	line-height: 0.9rem;
+	padding-left: 1.2rem;
+	padding-right: 0.1rem;
+	color: #fc1c07;
+	position: relative;
+	display: inline-block;
+}
+
+.commonHead h2 span {
+	position: absolute;
+	left: 0.3rem;
+	top: 0;
+	width: 0.9rem;
+	height: 0.9rem;
+	background: url(img/taobaoIco.png) no-repeat;
+	background-size: 17.5rem 12.5rem;
+}
+
+.commonHead h2 .icoLogo {
+	background-position: -3.1rem -1.32rem;
+}
+
+.commonHead h2 i {
+	width: 0.2rem;
+	height: 0.9rem;
+	float: left;
+}
+
+.commonHead h2 strong {
+	float: left;
+}
+
+
+/*超实惠公共头部结束*/
+
+
+/*超实惠  开始*/
+
+.veryCheap li {
+	float: left;
+	width: 3.25rem;
+	height: 4.675rem;
+	border: 1px solid #eeeeee;
+	padding-bottom: 0.15rem;
+}
+
+.veryCheap li h2 {
+	font-size: 0.55rem;
+	color: #363636;
+	padding-top: 0.45rem;
+	padding-left: 0.35rem;
+	position: relative;
+}
+
+.veryCheap li:nth-child(4n+1) h2 {
+	font-size: 0.65rem;
+	padding-top: 0.35rem;
+}
+
+.veryCheap li div {
+	text-align: center;
+}
+
+.veryCheap li img {
+	width: 2.05rem;
+	height: 2.65rem;
+}
+
+.veryCheap li:nth-child(4n+1) img {
+	width: 3.7rem;
+	height: 2.65rem;
+}
+
+.veryCheap li:nth-child(4n+1) {
+	width: 6.1rem;
+	border-left: none;
+}
+
+.veryCheap li:nth-child(4n) {
+	border-right: none;
+}
+
+.veryCheap li p {
+	font-size: 0.5rem;
+	line-height: 0.85rem;
+	color: #f23504;
+	padding-left: 0.35rem;
+}
+
+.veryBigIco {
+	position: absolute;
+	width: 2.2rem;
+	height: 0.7rem;
+	left: 3.4rem;
+	top: 0.35rem;
+	background: url(img/taobaoIco.png) no-repeat -6.65rem -0.5rem;
+	background-size: 17.5rem 12.5rem;
+}
+
+
+/*超实惠结束*/
+
+
+/*天猫精选开始*/
+
+.tianM h2 .icoLogo {
+	background-position: -6.65rem -1.32rem;
+}
+
+.tianM h2 strong {
+	color: #d10909;
+}
+
+.tianM_ul1 li {
+	width: 7.975rem;
+	position: relative;
+	float: left;
+}
+
+.tianM_ul1 li:nth-child(1) {
+	border-right: 2px solid #f3f3f3;
+}
+
+.tianM_ul1 li h2 {
+	font-size: 0.65rem;
+	color: #363636;
+	padding-top: 0.3rem;
+	padding-left: 0.4rem;
+}
+
+.sheapP {
+	font-size: 0.5rem;
+	line-height: 0.85rem;
+	height: 0.85rem;
+	color: #828282;
+	padding-left: 0.4rem;
+}
+
+.veryBigIco2 {
+	position: absolute;
+	width: 2.2rem;
+	height: 0.7rem;
+	left: 0.375rem;
+	top: 1.925rem;
+	background: url(img/taobaoIco.png) no-repeat -6.65rem -0.5rem;
+	background-size: 17.5rem 12.5rem;
+}
+
+.tianM_ul1 li img {
+	float: right;
+	margin-right: 0.8rem;
+	width: 3.3rem;
+	height: 3.55rem;
+}
+
+.tianM_ul2 {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	border-top: 2px solid #F5F5F5;
+}
+
+.tianM_ul2 li {
+	float: left;
+	width: 3.95rem;
+	height: 4.6rem;
+	border-right: 2px solid #F5F5F5;
+}
+
+.tianM_ul2 li:nth-last-child(1) {
+	border-right: none;
+}
+
+.tianM_ul2 li h2 {
+	font-size: 0.55rem;
+	color: #363636;
+	padding-top: 0.4rem;
+	padding-left: 0.35rem;
+	position: relative;
+}
+
+.tianM_ul2 li p {
+	font-size: 0.5rem;
+	line-height: 0.85rem;
+	color: #a6a6a6;
+	padding-left: 0.35rem;
+}
+
+.tianM_ul2 li div {
+	text-align: center;
+}
+
+.tianM_ul2 li img {
+	width: 2.975rem;
+	height: 2.25rem;
+}
+
+
+/*天猫精选结束*/
+
+
+/*特色好货开始*/
+
+.haohuoFoot {
+	padding-top: 0.35rem;
+	border-top: 1px solid #dadada;
+}
+
+.haoHuo h2 .icoLogo {
+	background-position: -7.65rem -1.3rem;
+}
+
+.haoHuo h2 strong {
+	color: #e5af10;
+}
+
+.pLogo {
+	margin-left: 0.45rem;
+	float: left;
+	padding-bottom: 0.35rem;
+}
+
+.pLogo a {
+	width: 0.9rem;
+	height: 0.9rem;
+	float: left;
+	margin-left: 0.2rem;
+	background: url(img/taobaoIco.png) no-repeat;
+	background-size: 17.5rem 12.5rem;
+}
+
+.pLogo .a1 {
+	background-position: -10rem 0;
+}
+
+.pLogo .a2 {
+	background-position: -11.6rem 0;
+}
+
+.pLogo .a3 {
+	background-position: -13.25rem 0;
+}
+
+.moreService {
+	float: right;
+	position: relative;
+	font-size: 0.55rem;
+	line-height: 0.9rem;
+	letter-spacing: 0.1rem;
+	margin-right: 0.75rem;
+	text-align: right;
+	padding-right: 0.55rem;
+}
+
+.moreService span {
+	position: absolute;
+	width: 0.2rem;
+	height: 0.4rem;
+	right: 0;
+	top: 0.25rem;
+	background: url(img/taobaoIco.png) no-repeat -15rem 0;
+	background-size: 17.5rem 12.5rem;
+}
+
+.moreService a {
+	color: #666666;
+}
+
+.haohuoFoot img {
+	width: 16rem;
+	height: 3.2rem;
+}
+
+
+/*特色好货结束*/
+
+
+/*热门市场开始*/
+
+.hotShiChang .moreService {
+	font-size: 0.5rem;
+	background: #eeeeee;
+	margin-top: 0rem;
+}
+
+.hotShiChang h2 .icoLogo {
+	background-position: -8.65rem -1.3rem;
+	background-size: 17.5rem 12.5rem;
+}
+
+.hotShiChang strong {
+	color: #54bb1a;
+}
+
+.hotSc_ul1 {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	padding: 0rem 0.3rem 0;
+}
+
+.hotSc_ul1 li {
+	float: left;
+	width: 7rem;
+	height: 5.65rem;
+	padding-left: 0.65rem;
+	padding-top: 0.75rem;
+}
+
+.hotSc_ul1 li:nth-child(1) {
+	border-right: 2px solid #e9e9e9;
+}
+
+.hotSc_ul1 li h2 {
+	font-size: 0.5rem;
+	color: #3e4045;
+}
+
+.hot_p {
+	font-size: 0.45rem;
+	color: #7b7b7b;
+	line-height: 1rem;
+}
+
+.cenImg {
+	height: 3.35rem;
+	width: 7rem;
+}
+
+.cenImg span {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.cenImg2 {
+	vertical-align: middle;
+	width: 6.15rem;
+	height: 2.6rem;
+}
+
+.cenImg3 {
+	vertical-align: middle;
+	width: 5.35rem;
+	height: 3.35rem;
+}
+
+.hotShiChang .commonHead h2 {
+	margin-left: 3.1rem;
+}
+
+.hotSc_ul2 li {
+	float: left;
+	width: 3.825rem;
+	height: 3.925rem;
+	padding-top: 0.625rem;
+	border: 1px solid #F3F3F3;
+}
+
+.hotSc_ul2 li:nth-child(4n+1) {
+	border-left: none;
+	padding-left: 0.275rem;
+}
+
+.hotSc_ul2 li:nth-child(4n) {
+	border-right: none;
+	padding-right: 0.275rem;
+}
+
+.hotSc_ul2 li h2 {
+	font-size: 0.5rem;
+	color: #3e4045;
+	padding-left: 0.7rem;
+	height: 0.45rem;
+}
+
+.hotSc_ul2 li p {
+	font-size: 0.45rem;
+	line-height: 0.9rem;
+	color: #a4a4a4;
+	padding-left: 0.7rem;
+}
+
+.hotSc_ul2 .p2_cenImg {
+	width: 3.825rem;
+	height: 2.575rem;
+	text-align: center;
+}
+
+.p2_cenImg span {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.p2_cenImg img {
+	width: 1.95rem;
+	height: 2.4rem;
+	vertical-align: middle;
+}
+
+.miaoSir img {
+	border: none;
+	vertical-align: top;
+	width: 16rem;
+	height: 3.2rem;
+}
+
+
+/*热门市场结束*/
+
+
+/*达人购开始*/
+
+.daRenBuy .moreService {
+	font-size: 0.5rem;
+	background: #eeeeee;
+	margin-top: 0rem;
+}
+
+.daRenBuy h2 .icoLogo {
+	background-position: -10rem -1.3rem;
+	background-size: 17.5rem 12.5rem;
+}
+
+.daRenBuy_ul strong {
+	color: #2a2a2a;
+}
+
+.daRenBuy_ul li {
+	float: left;
+	padding-top: 0.25rem;
+	width: 5rem;
+	height: 5.75rem;
+	margin-left: 0.25rem;
+}
+
+.daRenBuy_ul h2 {
+	font-size: 0.55rem;
+	position: relative;
+}
+
+.daRenBuy_ul .redTxt {
+	color: #ee0000;
+}
+
+.daRenBuy_ul p {
+	font-size: 0.45rem;
+	line-height: 0.8rem;
+	color: #8f8f8f;
+}
+
+.daRenBuy_ul img {
+	width: 5rem;
+	height: 4.35rem;
+}
+
+.redHotIco {
+	position: absolute;
+	width: 1.05rem;
+	height: 0.55rem;
+	left: 1.9rem;
+	top: 0;
+	background: url(img/taobaoIco.png) no-repeat -11.6rem -1.3rem;
+	background-size: 17.5rem 12.5rem;
+}
+
+.woGuanZhu {
+	width: 16rem;
+	margin-top: 0.2rem;
+}
+
+.woGuanZhu p {
+	width: 14.65rem;
+	height: 2rem;
+	border-top: 2px solid #f5f5f5;
+	margin: 0 auto;
+	position: relative;
+}
+
+.woGuanZhu p strong {
+	font-size: 0.45rem;
+	line-height: 1.9rem;
+	color: #1c1c1c;
+}
+
+.woGuanZhu p .gzIco {
+	position: absolute;
+	right: 0;
+	top: 0.25rem;
+	width: 1.45rem;
+	height: 1.45rem;
+	background: url(img/taobaoIco.png) no-repeat -15.3rem 0;
+	background-size: 17.5rem 12.5rem;
+}
+
+.woGuanZhu p em {
+	font-style: normal;
+	color: red;
+}
+
+.daRenBuy .commonHead h2 {
+	margin-left: 3.1rem;
+}
+
+
+/*达人购结束*/
+
+
+/*每日好店开始*/
+
+.headNav {
+	width: 16rem;
+	background: #eee;
+	text-align: center;
+	padding-top: 0.4rem;
+}
+
+.headNav h2 {
+	padding-left: 1.25rem;
+	position: relative;
+	display: inline-block;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	font-size: 0.5rem;
+	color: #2d2d2d;
+	letter-spacing: 0.1rem;
+}
+
+.headNav h2 span {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0.9rem;
+	height: 0.9rem;
+	background: url(img/taobaoIco.png) no-repeat -12.75rem -1.3rem;
+	background-size: 17.5rem 12.5rem;
+}
+
+.headNav p {
+	font-size: 0.4rem;
+	line-height: 1.15rem;
+	color: #8a8a8a;
+}
+
+.dayhd_ul li {
+	float: left;
+	width: 7.925rem;
+	height: 7.35rem;
+	border-right: 5px solid #efefef;
+	border-bottom: 5px solid #efefef;
+}
+
+.dayhd_ul li:nth-child(2) {
+	border-right: none;
+}
+
+.dayhd_ul li:nth-child(3) {
+	border-bottom: none;
+}
+
+.dayhd_ul li:nth-child(4) {
+	border-bottom: none;
+	border-right: none;
+}
+
+.dayhd_ul li h2 {
+	font-size: 0.6rem;
+	line-height: 1.35rem;
+	color: #262626;
+	padding-left: 0.3rem;
+}
+
+.dayhd_ul li p {
+	font-size: 0.5rem;
+	color: #7a7a7a;
+	padding-left: 0.4rem;
+	padding-right: 0.4rem;
+}
+
+.dayhd_ul li img {
+	width: 7.925rem;
+	height: 5.3rem;
+}
+
+
+/*每日好店结束*/
+
+
+/*猜你喜欢开始*/
+
+.guss .headNav span {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0.9rem;
+	height: 0.9rem;
+	background: url(img/taobaoIco.png) no-repeat -13.75rem -1.3rem;
+	background-size: 17.5rem 12.5rem;
+}
+
+.guss_ul li {
+	height: 11rem;
+	border-bottom: none;
+}
+
+.guss_ul li img {
+	width: 7.925rem;
+	height: 7.95rem;
+}
+
+.guss_ul li h2 {
+	font-size: 0.5rem;
+	line-height: 0.85rem;
+	width: 6.75rem;
+	letter-spacing: 0.04rem;
+	padding-top: 0.3rem;
+}
+
+.guss_ul li p {
+	font-size: 0.55rem;
+	height: 0.55rem;
+	line-height: 1.05rem;
+}
+
+.guss_ul p em {
+	float: left;
+	color: #ff3700;
+}
+
+.guss_ul p span {
+	float: right;
+}
+
+
+/*猜你喜欢结束*/
+
+.finish {
+	width: 16rem;
+	height: 5.75rem;
+	background: #eeeeee;
+	text-align: center;
+	padding-bottom: 0.525rem;
+	border-bottom: 1px solid #d8dadf;
+}
+
+.finish h2 {
+	font-size: 0.5rem;
+	line-height: 1.3rem;
+	padding-top: 0.35rem;
+	color: #23252c;
+}
+
+.finish img {
+	width: 14.95rem;
+	height: 4.1rem;
+}
+
+#foot {
+	width: 16rem;
+	height: 1.95rem;
+	bottom: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.footerNav a {
+	float: left;
+	width: 1.75rem;
+	margin: 0 0.725rem;
+	font-size: 0.35rem;
+	line-height: 0.8rem;
+	color: #272c2f;
+	padding-top: 1.15rem;
+	position: relative;
+	text-align: center;
+}
+
+.footerNav a strong {
+	color: #272c2f
+}
+
+.footerNav a span {
+	position: absolute;
+	left: 0.35rem;
+	top: 0.15rem;
+	background: url(img/taobaoIco.png) no-repeat;
+	width: 1.05rem;
+	height: 1rem;
+	background-size: 17.5rem 12.5rem;
+}
+
+.footerNav a .navSp1 {
+	background-position: 0 -2.8rem;
+}
+
+.footerNav a .navSp2 {
+	background-position: -1.25rem -2.8rem;
+}
+
+.footerNav a .navSp3 {
+	background-position: -2.5rem -2.8rem;
+}
+
+.footerNav a .navSp4 {
+	background-position: -3.75rem -2.8rem;
+}
+
+.footerNav a .navSp5 {
+	background-position: -5rem -2.8rem;
+}
+
+.footerNav a .activeStr {
+	color: #ff5000;
+}

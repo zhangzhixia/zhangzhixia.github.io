@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<script>
+			var i = 0;
+			i = window.devicePixelRatio > 1 ? 1 / window.devicePixelRatio : 1;
+			document.write('<meta name="viewport" content="width=device-width,initial-scale=' + i + ',minimum-scale=' + i + ',maximum-scale=' + i + ',user-scalable=no" />');
+		</script>
+		<title></title>
+		<script>
+			var oHtml = document.getElementsByTagName("html")[0];
+			var iWidth = oHtml.getBoundingClientRect().width;
+			oHtml.style.fontSize = iWidth / 16 + "px";
+		</script>
+		<link rel="stylesheet" href="taobao.css" />
+	</head>
+
+	<body>
+		<header id="header">
+			<a href="#" class="weixin"></a>
+			<a href="#" class="msg"></a>
+			<div class="head_cen">
+				<section class="seach">
+					<span class="icoSeach"></span>
+					<strong>家里也要萌萌哒</strong>
+					<span class="icoCream"></span>
+				</section>
+				<span class="icoFoot"></span>
+			</div>
+		</header>
+
+		<section class="tbHeadlines">
+			<ul id="mainImgList">
+				<li>
+					<a href="#">
+						<img class="bigImg" src="img/tbImg1.png" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="bigImg"  src="img/tbImg2.png" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="bigImg"  src="img/tbImg3.png" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="bigImg"  src="img/tbImg4.png" />
+					</a>
+				</li>
+			</ul>			
+			<ul class="imgList">
+				<li>
+					<a href="#">
+						<img src="img/tbTianmao.png" />
+						<h2>天猫</h2>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/tbjhs.jpg" />
+						<h2>聚划算</h2>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/tbJinkou.jpg" />
+						<h2>天猫国际</h2>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/tbWm.jpg" />
+						<h2>口碑外卖</h2>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/tbcs.jpg" />
+						<h2>天猫超市</h2>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/tbcz.jpg" />
+						<h2>充值中心</h2>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/tblx.jpg" />
+						<h2>阿里旅行</h2>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/tbt.jpg" />
+						<h2>领金币</h2>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/tbbj.jpg" />
+						<h2>淘生活</h2>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/tbfl.jpg" />
+						<h2>分类</h2>
+					</a>
+				</li>
+			</ul>
+			<div class="news">
+				<a href="#" class="tbheadLogo">
+					<img src="img/tbheadLogo.jpg" />
+				</a>
+				<div class="newList_div">
+					<ul class="newList">
+						<li>
+							<span class="circle"></span>
+							<strong>原来都用它！女明星逆龄美肤的…</strong>
+						</li>
+						<li class="newList_li2">
+							<span class="circle"></span>
+							<strong>原来都用它！女明星逆龄美肤的…</strong>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<section class="panicBuying clearFix">
+				<div class="panicL">
+					<a href="#">
+						<h2><span class="clockIco"></span>淘抢购</h2>
+						<p>苏泊尔球电饭煲</p>
+						<span class="clockNum"></span>
+						<img class="suboerImg" src="img/tb01.png" />
+					</a>
+				</div>
+				<div class="panicR clearFix">
+					<div class="panicR_top clearFix">
+						<a href="#">
+							<div class="panicDivL">
+								<h2><span class="handIco"></span>有好货</h2>
+								<p class="p1">好品味从挑剔开始</p>
+								<p class="p2">品质生活指南</p>
+							</div>
+							<img src="img/tb02.png" />
+						</a>
+					</div>
+					<ul class="panicR_foot clearFix">
+						<li>
+							<a href="#">
+								<h3><span class="tuziIco"></span>爱逛街</h2>
+								<p>可爱的你会喜欢</p>
+								<img src="img/tb03.png"/>
+							</a>
+						</li>
+						<li class="panicR_li2">
+							<a href="#">
+								<h3><span class="baozhenIco"></span>必买清单</h2>
+								<p>都帮您整理好啦</p>
+								<img src="img/tb04.png"/>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+			</section>
+			<section>
+				<header class="commonHead">
+					<h2><span class="icoLogo"></span><i></i><strong>超实惠</strong><i></i></h2>
+				</header>
+				<ul class="veryCheap clearFix">
+					<li>
+						<a href="#">
+							<h2>非常大牌<span class="veryBigIco"></span></h2>
+							<p>初春冻龄女神心机搭配</p>
+							<div>
+								<img src="img/tb05.png"/>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>全球精选</h2>
+							<p>享当地同价</p>
+							<div>
+								<img src="img/tb06.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>全球精选</h2>
+							<p>享当地同价</p>
+							<div>
+								<img src="img/tb06.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>全球精选</h2>
+							<p>享当地同价</p>
+							<div>
+								<img src="img/tb06.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>天天特价<span class="veryBigIco"></span></h2>
+							<p>每日精选千款好货</p>
+							<div>
+								<img src="img/tb07.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>全球精选</h2>
+							<p>享当地同价</p>
+							<div>
+								<img src="img/tb06.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>全球精选</h2>
+							<p>享当地同价</p>
+							<div>
+								<img src="img/tb06.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>全球精选</h2>
+							<p>享当地同价</p>
+							<div>
+								<img src="img/tb06.png"/>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</section>
+			<section class="tianM">
+				<header class="commonHead">
+					<h2><span class="icoLogo"></span><i></i><strong>天猫精选</strong><i></i></h2>
+				</header>
+				<ul class="tianM_ul1 clearFix">
+					<li class="clearFix">
+						<a href="#">
+							<h2>全球时尚</h2>
+							<p class="sheapP">平价买大牌</p>
+							<span class="veryBigIco2"></span>
+							<img src="img/tb08.png"/>
+						</a>
+					</li>
+					<li class="clearFix">
+						<a href="#">
+							<h2>全球时尚</h2>
+							<p class="sheapP">平价买大牌</p>
+							<span class="veryBigIco2"></span>
+							<img src="img/tb08.png"/>
+						</a>
+					</li>
+				</ul>
+				<ul class="tianM_ul2 clearFix">
+					<li>
+						<a href="#">
+							<h2>喵先生</h2>
+							<p>新鲜好吃不贵</p>
+							<div>
+								<img src="img/tb09.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>喵先生</h2>
+							<p>新鲜好吃不贵</p>
+							<div>
+								<img src="img/tb09.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>喵先生</h2>
+							<p>新鲜好吃不贵</p>
+							<div>
+								<img src="img/tb09.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>喵先生</h2>
+							<p>新鲜好吃不贵</p>
+							<div>
+								<img src="img/tb09.png"/>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</section>
+			<section class="haoHuo">
+				<header class="commonHead">
+					<h2><span class="icoLogo"></span><i></i><strong>特色好货</strong><i></i></h2>
+				</header>
+				<ul class="veryCheap clearFix">
+					<li>
+						<a href="#">
+							<h2>全球购<span class="veryBigIco"></span></h2>
+							<p>秒杀KipLing双肩背包</p>
+							<div>
+								<img src="img/tb05.png"/>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>全球精选</h2>
+							<p>享当地同价</p>
+							<div>
+								<img src="img/tb06.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>全球精选</h2>
+							<p>享当地同价</p>
+							<div>
+								<img src="img/tb06.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>全球精选</h2>
+							<p>享当地同价</p>
+							<div>
+								<img src="img/tb06.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>天天特价<span class="veryBigIco"></span></h2>
+							<p>每日精选千款好货</p>
+							<div>
+								<img src="img/tb07.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>全球精选</h2>
+							<p>享当地同价</p>
+							<div>
+								<img src="img/tb06.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>全球精选</h2>
+							<p>享当地同价</p>
+							<div>
+								<img src="img/tb06.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>全球精选</h2>
+							<p>享当地同价</p>
+							<div>
+								<img src="img/tb06.png"/>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<footer class="haohuoFoot clearFix">
+					<p class="pLogo">
+						<a class="a1" href="#"></a>
+						<a class="a2" href="#"></a>
+						<a class="a3" href="#"></a>
+					</p>
+					<p class="moreService"><a href="#">更多服务</a><span></span></p>
+					<a href="#">
+						<img src="img/tb10.png"/>
+					</a>
+				</footer>
+			</section>
+			<section class="hotShiChang">
+				<header class="commonHead">
+					<h2><span class="icoLogo"></span><i></i><strong>热门市场</strong><i></i></h2>
+					<p class="moreService"><a href="#">更多</a><span></span></p>
+				</header>
+				<ul class="hotSc_ul1 clearFix">
+					<li class="clearFix">
+						<a href="#">
+							<h2>花鸟</h2>
+							<p class="hot_p">奇趣自然</p>
+							<div class="cenImg">
+								<span></span>
+								<img class="cenImg2" src="img/tb11.png"/>
+							</div>
+							
+						</a>
+					</li>
+					<li class="clearFix">
+						<a href="#">
+							<h2>女装</h2>
+							<p class="hot_p">新年新衣</p>
+							<div class="cenImg">
+								<span></span>
+								<img class="cenImg3" src="img/tb12.png"/>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<ul class="hotSc_ul2 clearFix">
+					<li>
+						<a href="#">
+							<h2>美妆1</h2>
+							<p class="hot_p2">年度大赏</p>
+							<div class="p2_cenImg">
+								<span></span>
+								<img class="p2_cenImg2" src="img/tb13.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>美妆</h2>
+							<p class="hot_p2">年度大赏</p>
+							<div class="p2_cenImg">
+								<span></span>
+								<img class="p2_cenImg2" src="img/tb13.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>美妆</h2>
+							<p class="hot_p2">年度大赏</p>
+							<div class="p2_cenImg">
+								<span></span>
+								<img class="p2_cenImg2" src="img/tb13.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>美妆</h2>
+							<p class="hot_p2">年度大赏</p>
+							<div class="p2_cenImg">
+								<span></span>
+								<img class="p2_cenImg2" src="img/tb13.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>美妆1</h2>
+							<p class="hot_p2">年度大赏</p>
+							<div class="p2_cenImg">
+								<span></span>
+								<img class="p2_cenImg2" src="img/tb13.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>美妆</h2>
+							<p class="hot_p2">年度大赏</p>
+							<div class="p2_cenImg">
+								<span></span>
+								<img class="p2_cenImg2" src="img/tb13.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>美妆</h2>
+							<p class="hot_p2">年度大赏</p>
+							<div class="p2_cenImg">
+								<span></span>
+								<img class="p2_cenImg2" src="img/tb13.png"/>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>美妆</h2>
+							<p class="hot_p2">年度大赏</p>
+							<div class="p2_cenImg">
+								<span></span>
+								<img class="p2_cenImg2" src="img/tb13.png"/>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<a href="#" class="miaoSir"> 
+					<img src="img/tb14.png"/>
+				</a>
+			</section>
+			<section class="daRenBuy">
+				<header class="commonHead">
+					<h2><span class="icoLogo"></span><i></i><strong>达人购</strong><i></i></h2>
+					<p class="moreService"><a href="#">更多</a><span></span></p>
+				</header>
+				<ul class="daRenBuy_ul clearFix">
+					<li>
+						<a href="#">
+							<h2>
+								<strong class="redTxt">红人圈</strong>
+								<span class="redHotIco"></span>
+							</h2>
+							<p>逼格流露在衣领间!</p>
+							<img src="img/tb15.png"/>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>
+								<strong>视频直播</strong>
+								<span></span>
+							</h2>
+							<p>逼格流露在衣领间!</p>
+							<img src="img/tb16.png"/>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>
+								<strong>搭配控</strong>
+								<span></span>
+							</h2>
+							<p>逼格流露在衣领间!</p>
+							<img src="img/tb17.png"/>
+						</a>
+					</li>
+				</ul>
+				<div class="woGuanZhu">
+					<p>
+						<a href="#"><strong>我关注了<em>1</em>个达人</strong></a>
+						<a href="#" class="gzIco"></a>
+					</p>
+					
+				</div>
+			</section>
+			<section class="dayGoodDian">
+				<header class="headNav">
+					<h2><span></span><strong>每日好店</strong></h2>
+					<p>发现被深藏的好店</p>
+				</header>
+				<ul class="dayhd_ul clearFix">
+					<li>
+						<a href="#">
+							<img src="img/tb18.png"/>
+							<h2>【今日推荐-1天3波】</h2>
+							<p>739.7万人正在逛此店</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/tb19.png"/>
+							<h2>【女神の店-美人装】</h2>
+							<p>739.7万人正在逛此店</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/tb19.png"/>
+							<h2>【今日推荐-1天3波】</h2>
+							<p>739.7万人正在逛此店</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/tb18.png"/>
+							<h2>【今日推荐-1天3波】</h2>
+							<p>739.7万人正在逛此店</p>
+						</a>
+					</li>
+				</ul>
+			</section>
+			<section class="guss">
+				<header class="headNav">
+					<h2><span></span><strong>猜你喜欢</strong></h2>
+					<p>实时推荐最适合你的宝贝</p>
+				</header>
+				<ul class="guss_ul dayhd_ul clearFix">
+					<li>
+						<a href="#">
+							<img src="img/tb20.png"/>
+							<h2>宠物猫咪指甲套防抓伤美甲宠物指甲…</h2>
+							<p class="clearFix"><em>￥15.6</em><span>147人付款</span></p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/tb21.png"/>
+							<h2>硅胶按摩梳 猫狗除毛刷 冬夏必备…</h2>
+							<p class="clearFix"><em>￥19</em><span>866人付款</span></p>
+						</a>
+					</li>
+				</ul>
+			</section>
+			<section class="finish">
+				<a href="#">
+					<h2>宝贝已经看完了，18:00会更新哦！</h2>
+					<img src="img/tb22.png"/>
+				</a>
+			</section>
+		</section>
+		<footer id="foot" class="clearFix">
+			<nav class="footerNav clearFix">
+				<a href="#">
+					<span class="navSp1"></span>
+					<strong class="activeStr">首页</strong>
+				</a>
+				<a href="#">
+					<span class="navSp2"></span>
+					<strong>首页</strong>
+				</a>
+				<a href="#">
+					<span class="navSp3"></span>
+					<strong>首页</strong>
+				</a>
+				<a href="#">
+					<span class="navSp4"></span>
+					<strong>购物车</strong>
+				</a>
+				<a href="#">
+					<span class="navSp5"></span>
+					<strong>我的淘宝</strong>
+				</a>
+			</nav>
+		</footer>
+		<script type="text/javascript" src="jquery-2.2.4.min.js"></script>
+		<script type="text/javascript" src="taobao.js"></script>
+	</body>
+</html>
