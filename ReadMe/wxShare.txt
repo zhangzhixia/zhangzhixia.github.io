@@ -1,0 +1,80 @@
+export function wx_share(params,type,links) {
+    var sdk = "https://res.wx.qq.com/open/js/jweixin-1.4.0.js";
+    //服务器下配置好的静态文件 http://test.fenxuekeji.com/wechat/get_wechat_shared_config.json
+    var api = "/wechat/get_wechat_shared_config.json";
+    var share_api;
+    if(type === "challenge_detail"){
+       share_api = "/api/challenge/events/" + params.uuid + "/share";
+   }else if (type === "snowpark") {
+       share_api = "/api/shares/content?kind=ski_ranch&ski_ranch_id="+params.ski_ranch_id
+   }
+    var set_data;
+    $.getScript(sdk, function() {
+      $.getJSON(api, {
+        url: window.location.href
+      }, function(resp) {
+        var r = resp.data || {};
+        console.log("fenxiang=======000000")
+        window.wx.config({
+          appId: r.appid,
+          //debug: true,
+          timestamp: r.timestamp,
+          nonceStr: r.nonceStr,
+          signature: r.signature,
+          jsApiList: [
+            'checkJsApi',
+            'updateTimelineShareData',
+            'updateAppMessageShareData',
+            'onMenuShareWeibo',
+            'chooseImage',
+            "hideAllNonBaseMenuItem",
+            'hideMenuItems',
+            'showMenuItems'
+          ]
+        });
+        window.wx.ready(function() {
+          console.log("fenxiang=======")
+           window.wx.checkJsApi({
+                jsApiList: [
+                  'updateTimelineShareData',
+                  'updateAppMessageShareData',
+                  'onMenuShareWeibo',
+                  'chooseImage',
+                  'hideMenuItems',
+                  'showMenuItems'
+                  ], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+                success: function(res) {
+                    console.log('checkJsApi',res)
+                // 以键值对的形式返回，可用的api值true，不可用为false
+                // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+                }
+            });
+            $.getJSON(share_api, params, function(resp) {
+              var r = resp.data || {};
+              set_data = {
+                title: r.title,
+                desc: r.description === undefined ? r.desc : r.description,
+                link: type === 'event' ? front_host + "/h5/mogul_react/events?event_uuid="+params.event_uuid 
+                  :  (
+                    type === 'vip_card' ? r.share_url : links
+                  ),
+                imgUrl:r.img_url === undefined ? r.icon_url.x200 : r.img_url,
+              };
+              window.wx.updateTimelineShareData({
+                title: r.title,
+                link: links,
+                imgUrl:r.icon_url.x200,
+              });
+              window.wx.updateAppMessageShareData(set_data);
+            });
+  
+        });
+  
+        window.wx.error(function(res) {
+          // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+  
+        });
+  
+      });
+    })
+  }
